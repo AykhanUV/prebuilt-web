@@ -22,13 +22,13 @@ import React, { useEffect } from 'react';
           document.querySelector('.starry-night').appendChild(star);
         };
 
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < 100; i++) {
           createStar('small');
         }
-        for (let i = 0; i < 30; i++) {
+        for (let i = 0; i < 60; i++) {
           createStar('medium');
         }
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < 40; i++) {
           createStar('large');
         }
       }, []);
