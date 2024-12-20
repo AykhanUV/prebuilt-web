@@ -35,6 +35,7 @@ body {
     .apk-section img {
       max-width: 100px;
       max-height: 100px;
+      margin: 10px 0;
     }
 
     .apk-section button {
@@ -67,24 +68,31 @@ body {
       background: white;
       border-radius: 50%;
       opacity: 0.7;
+      animation: moveStar linear infinite, twinkle 2s infinite;
     }
 
     .star.small {
       width: 2px;
       height: 2px;
-      animation: twinkle 2s infinite;
     }
 
     .star.medium {
       width: 3px;
       height: 3px;
-      animation: twinkle 3s infinite;
     }
 
     .star.large {
       width: 4px;
       height: 4px;
-      animation: twinkle 4s infinite;
+    }
+
+    @keyframes moveStar {
+      0% {
+        transform: translateY(0) translateX(0);
+      }
+      100% {
+        transform: translateY(100vh) translateX(100vw);
+      }
     }
 
     @keyframes twinkle {
