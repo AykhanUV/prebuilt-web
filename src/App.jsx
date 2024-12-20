@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
     const apks = [
-      { name: 'Afnify', logo: 'afnify.png', desc: 'Description for Afnify', downloadLink: 'link1' },
+      { name: 'Afnify', logo: 'afnify.png', desc: 'Description for Afnify', downloadLink: 'https://github.com/AykhanUV/Afnify/releases/download/Afnify(19.26.42)v7/Afnify.apk' },
       { name: 'AfnMusic', logo: 'afnmusic.png', desc: 'Description for AfnMusic', downloadLink: 'link2' },
       { name: 'MicroG', logo: 'microg.png', desc: 'Description for MicroG', downloadLink: 'link3' },
       { name: 'AfnPlayer', logo: 'afnplayer.png', desc: 'Description for AfnPlayer', downloadLink: 'link4' },
