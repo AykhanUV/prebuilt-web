@@ -1,0 +1,97 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: #121212;
+      color: #ffffff;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .app {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .apk-section {
+      border: 1px solid #444;
+      padding: 20px;
+      margin: 10px;
+      width: 300px;
+      text-align: center;
+      background: #1e1e1e;
+      border-radius: 8px;
+      flex: 1 1 calc(25% - 20px);
+      box-sizing: border-box;
+    }
+
+    .apk-section img {
+      max-width: 100px;
+      max-height: 100px;
+    }
+
+    .apk-section button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .apk-section button:hover {
+      background-color: #0056b3;
+    }
+
+    .starry-night {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.7;
+    }
+
+    .star.small {
+      width: 2px;
+      height: 2px;
+      animation: twinkle 2s infinite;
+    }
+
+    .star.medium {
+      width: 3px;
+      height: 3px;
+      animation: twinkle 3s infinite;
+    }
+
+    .star.large {
+      width: 4px;
+      height: 4px;
+      animation: twinkle 4s infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% {
+        opacity: 0.7;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
