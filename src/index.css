@@ -26,10 +26,11 @@ body {
       margin: 10px;
       width: 300px;
       text-align: center;
-      background: #1e1e1e;
+      background: rgba(30, 30, 30, 0.7); /* Semi-transparent background */
       border-radius: 8px;
       flex: 1 1 calc(25% - 20px);
       box-sizing: border-box;
+      backdrop-filter: blur(10px); /* Add a blur effect to the background */
     }
 
     .apk-section img {
@@ -41,15 +42,17 @@ body {
     .apk-section button {
       margin-top: 10px;
       padding: 10px 20px;
-      background-color: #007bff;
+      background-color: #ff0000; /* Red background */
       color: white;
       border: none;
       cursor: pointer;
       border-radius: 4px;
+      transition: transform 0.2s; /* Add a transition for the hover effect */
     }
 
     .apk-section button:hover {
-      background-color: #0056b3;
+      background-color: #cc0000; /* Darker red on hover */
+      transform: scale(1.05); /* Slightly enlarge the button on hover */
     }
 
     .starry-night {
