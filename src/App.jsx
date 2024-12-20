@@ -36,6 +36,7 @@ import React, { useEffect } from 'react';
       return (
         <div className="app">
           <div className="starry-night"></div>
+          <h1>APK Center</h1>
           {apks.map((apk, index) => (
             <div key={index} className="apk-section">
               <h2>{apk.name}</h2>
@@ -44,6 +45,9 @@ import React, { useEffect } from 'react';
               <button onClick={() => window.open(apk.downloadLink, '_blank')}>Download</button>
             </div>
           ))}
+          <div className="footer">
+            <p>&copy; 2024 AykhanUV</p>
+          </div>
         </div>
       );
     }
