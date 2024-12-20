@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 
     const apks = [
-      { name: 'Afnify', logo: 'afnify.png', desc: 'Description for Afnify', downloadLink: 'link1' },
-      { name: 'AfnMusic', logo: 'afnmusic.png', desc: 'Description for AfnMusic', downloadLink: 'link2' },
-      { name: 'MicroG', logo: 'microg.png', desc: 'Description for MicroG', downloadLink: 'link3' },
-      { name: 'AfnPlayer', logo: 'afnplayer.png', desc: 'Description for AfnPlayer', downloadLink: 'link4' },
-      { name: 'Symphony', logo: 'symphony.png', desc: 'Description for Symphony', downloadLink: 'link5' },
-      { name: 'Photomath', logo: 'photomath.png', desc: 'Description for Photomath', downloadLink: 'link6' },
-      { name: 'Spotify', logo: 'spotify.png', desc: 'Description for Spotify', downloadLink: 'link7' },
-      { name: 'YT-Extended', logo: 'yt-extended.png', desc: 'Description for YT-Extended', downloadLink: 'link8' },
+      { name: 'Afnify', logo: 'afnify.png', desc: 'This app is modified YouTube app with no ads and custom features', downloadLink: 'https://github.com/AykhanUV/Afnify/releases/download/Afnify(19.26.42)v7/Afnify.apk' },
+      { name: 'AfnMusic', logo: 'afnmusic.png', desc: 'This app is modified YouTube Music app with no ads and custom features', downloadLink: 'https://github.com/AykhanUV/AfnMusic/releases/download/AfnMusic(7.16.53)v3/AfnMusic.apk' },
+      { name: 'MicroG', logo: 'microg.png', desc: 'Just MicroG required for YT products', downloadLink: 'https://github.com/AykhanUV/MicroG/releases/download/2.0/MicroG-signed.apk' },
+      { name: 'AfnPlayer', logo: 'afnplayer.png', desc: 'An Android native video player', downloadLink: 'https://github.com/AykhanUV/AfnPlayer/releases/download/v1.0/AfnPlayer-arm64-v8a.apk' },
+      { name: 'Symphony', logo: 'symphony.png', desc: 'Lightweight, elegant music player for Android 9+ ', downloadLink: 'https://github.com/AykhanUV/Symphony/releases/download/v2024.4.111/Symphony.apk' },
+      { name: 'Photomath', logo: 'photomath.png', desc: 'Modded version of Photomath', downloadLink: 'https://github.com/AykhanUV/mc/releases/download/1.21.30.03/PhotoMath.v8.37.0.Rollback.apk' },
+      { name: 'Spotify', logo: 'spotify.png', desc: 'Modded version of Spotify', downloadLink: 'https://github.com/AykhanUV/mc/releases/download/1.21.30.03/Spotify.v8.9.98.488.Experimental.Merged.apk' },
+      { name: 'YT-Extended', logo: 'yt-extended.png', desc: 'This app is modified YouTube app with no ads and custom features', downloadLink: 'https://github.com/AykhanUV/YT-Extended/releases/download/YT-Extended(19.26.42)v2/YT-Extended.apk' },
     ];
 
     function App() {
