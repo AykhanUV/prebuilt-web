@@ -34,7 +34,7 @@ body {
       margin: 10px;
       width: 300px;
       text-align: center;
-      background: rgba(30, 30, 30, 0.7); /* Semi-transparent background */
+      background: rgba(30, 30, 30, 0.5); /* Lower opacity background */
       border-radius: 8px;
       box-sizing: border-box;
       backdrop-filter: blur(10px); /* Add a blur effect to the background */
