@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 
     const apks = [
-      { logo: 'logo1.png', desc: 'Description for APK 1', downloadLink: 'link1' },
-      { logo: 'logo2.png', desc: 'Description for APK 2', downloadLink: 'link2' },
-      { logo: 'logo3.png', desc: 'Description for APK 3', downloadLink: 'link3' },
-      { logo: 'logo4.png', desc: 'Description for APK 4', downloadLink: 'link4' },
-      { logo: 'logo5.png', desc: 'Description for APK 5', downloadLink: 'link5' },
-      { logo: 'logo6.png', desc: 'Description for APK 6', downloadLink: 'link6' },
-      { logo: 'logo7.png', desc: 'Description for APK 7', downloadLink: 'link7' },
-      { logo: 'logo8.png', desc: 'Description for APK 8', downloadLink: 'link8' },
+      { name: 'Afnify', logo: 'afnify.png', desc: 'Description for Afnify', downloadLink: 'link1' },
+      { name: 'AfnMusic', logo: 'afnmusic.png', desc: 'Description for AfnMusic', downloadLink: 'link2' },
+      { name: 'MicroG', logo: 'microg.png', desc: 'Description for MicroG', downloadLink: 'link3' },
+      { name: 'AfnPlayer', logo: 'afnplayer.png', desc: 'Description for AfnPlayer', downloadLink: 'link4' },
+      { name: 'Symphony', logo: 'symphony.png', desc: 'Description for Symphony', downloadLink: 'link5' },
+      { name: 'Photomath', logo: 'photomath.png', desc: 'Description for Photomath', downloadLink: 'link6' },
+      { name: 'Spotify', logo: 'spotify.png', desc: 'Description for Spotify', downloadLink: 'link7' },
+      { name: 'YT-Extended', logo: 'yt-extended.png', desc: 'Description for YT-Extended', downloadLink: 'link8' },
     ];
 
     function App() {
@@ -37,7 +37,8 @@ import React, { useEffect } from 'react';
           <div className="starry-night"></div>
           {apks.map((apk, index) => (
             <div key={index} className="apk-section">
-              <img src={apk.logo} alt={`APK ${index + 1}`} />
+              <img src={`/${apk.logo}`} alt={apk.name} />
+              <h2>{apk.name}</h2>
               <p>{apk.desc}</p>
               <button onClick={() => window.open(apk.downloadLink, '_blank')}>Download</button>
             </div>
