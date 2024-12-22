@@ -1,126 +1,125 @@
 body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background: #121212;
-      color: #ffffff;
-      overflow-x: hidden;
-      overflow-y: auto;
-      position: relative;
-    }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #121212;
+  color: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
 
-    .app {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      position: relative;
-      z-index: 1;
-      min-height: 100vh; /* Ensure the app takes at least the full viewport height */
-    }
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh; /* Ensure the app takes at least the full viewport height */
+}
 
-    .apk-sections {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 100%;
-      margin-top: 20px;
-    }
+.apk-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
 
-    .apk-section {
-      border: 1px solid #444;
-      padding: 20px;
-      margin: 10px;
-      width: 300px;
-      text-align: center;
-      background: rgba(30, 30, 30, 0.5); /* Lower opacity background */
-      border-radius: 8px;
-      box-sizing: border-box;
-      backdrop-filter: blur(10px); /* Add a blur effect to the background */
-    }
+.apk-section {
+  border: 1px solid #444;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  text-align: center;
+  background: rgba(30, 30, 30, 0.5); /* Lower opacity background to 50% */
+  border-radius: 8px;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px); /* Add a blur effect to the background */
+  opacity: 0.7; /* Decrease the opacity of the entire section */
+}
 
-    .apk-section img {
-      max-width: 100px;
-      max-height: 100px;
-      margin: 10px 0;
-    }
+.apk-section img {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 10px 0;
+}
 
-    .apk-section button {
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #ff0000; /* Red background */
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 4px;
-      transition: transform 0.2s; /* Add a transition for the hover effect */
-    }
+.apk-section button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff0000; /* Red background */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.2s; /* Add a transition for the hover effect */
+}
 
-    .apk-section button:hover {
-      background-color: #cc0000; /* Darker red on hover */
-      transform: scale(1.05); /* Slightly enlarge the button on hover */
-    }
+.apk-section button:hover {
+  background-color: #cc0000; /* Darker red on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
 
-    .starry-night {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #000;
-      overflow: hidden;
-      z-index: -1;
-    }
+.starry-night {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+  z-index: -1;
+}
 
-    .star {
-      position: absolute;
-      background: white;
-      border-radius: 50%;
-      opacity: 0.7;
-      animation: moveStar linear infinite, twinkle 2s infinite;
-    }
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: moveStar linear infinite, twinkle 2s infinite;
+}
 
-    .star.small {
-      width: 2px;
-      height: 2px;
-    }
+.star.small {
+  width: 2px;
+  height: 2px;
+}
 
-    .star.medium {
-      width: 3px;
-      height: 3px;
-    }
+.star.medium {
+  width: 3px;
+  height: 3px;
+}
 
-    .star.large {
-      width: 4px;
-      height: 4px;
-    }
+.star.large {
+  width: 4px;
+  height: 4px;
+}
 
-    @keyframes moveStar {
-      0% {
-        transform: translateY(0) translateX(0);
-      }
-      100% {
-        transform: translateY(100vh) translateX(100vw);
-      }
-    }
+@keyframes moveStar {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(100vh) translateX(100vw);
+  }
+}
 
-    @keyframes twinkle {
-      0%, 100% {
-        opacity: 0.7;
-      }
-      50% {
-        opacity: 1;
-      }
-    }
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 
-    .footer {
-      width: 100%;
-      text-align: center;
-      padding: 10px;
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(10px);
-      position: relative;
-      bottom: 0;
-      margin-top: auto; /* Push the footer to the bottom */
-    }
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  margin-top: auto; /* Push the footer to the bottom */
+}
