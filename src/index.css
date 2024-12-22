@@ -34,11 +34,18 @@ body {
   margin: 10px;
   width: 300px;
   text-align: center;
-  background: rgba(30, 30, 30, 0.5); /* Lower opacity background to 50% */
   border-radius: 8px;
   box-sizing: border-box;
-  backdrop-filter: blur(10px); /* Add a blur effect to the background */
-  opacity: 0.7; /* Decrease the opacity of the entire section */
+  background: rgba(30, 30, 30, 0.5); /* Lower opacity background to 50% */
+  position: relative; /* Ensure the content is positioned relative to the section */
+}
+
+.apk-section img,
+.apk-section h2,
+.apk-section p,
+.apk-section button {
+  position: relative; /* Ensure these elements are positioned relative to the section */
+  z-index: 1; /* Place these elements above the background */
 }
 
 .apk-section img {
