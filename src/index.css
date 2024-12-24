@@ -40,6 +40,8 @@ body {
   position: relative; /* Ensure the content is positioned relative to the section */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
 .apk-section:hover {
@@ -137,4 +139,15 @@ body {
   position: relative;
   bottom: 0;
   margin-top: auto; /* Push the footer to the bottom */
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }

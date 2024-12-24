@@ -38,10 +38,10 @@ function App() {
   return (
     <div className="app">
       <div className="starry-night"></div>
-      <h1>APK Center</h1>
+      <h1 className="fade-in">APK Center</h1>
       <div className="apk-sections">
         {apks.map((apk, index) => (
-          <div key={index} className="apk-section">
+          <div key={index} className="apk-section fade-in">
             <h2>{apk.name}</h2>
             <img src={`/${apk.logo}`} alt={apk.name} />
             <p>{apk.desc}</p>
@@ -49,7 +49,7 @@ function App() {
           </div>
         ))}
       </div>
-      <div className="footer">
+      <div className="footer fade-in">
         <p>&copy; 2024 AykhanUV</p>
       </div>
     </div>
