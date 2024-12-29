@@ -10,7 +10,7 @@ const apks = [
   { name: 'Spotify', logo: 'spotify.png', desc: 'Modded version of Spotify', downloadLink: 'https://github.com/AykhanUV/mc/releases/download/1.21.30.03/Spotify.v8.9.98.488.Experimental.Merged.apk' },
   { name: 'YT-Extended', logo: 'yt-extended.png', desc: 'This app is modified YouTube app with no ads and custom features(Difference from Afnify is branding and version/patches)', downloadLink: 'https://github.com/AykhanUV/YT-Extended/releases/download/YT-Extended(19.26.42)v2/YT-Extended.apk' },
   { name: 'TikTok', logo: 'tiktok.png', desc: 'Modified TikTok. No ads, watermark-free downloads.', downloadLink: 'https://github.com/AykhanUV/AfnTikTok/releases/download/v36.5.4(v2)/AfnTikTok.apk' },
-  { name: 'Minecraft', logo: 'minecraft.png', desc: 'Minecraft v1.21.51.02, arm64-v8a apk. Music is cut off to reduce file size', downloadLink: 'https://github.com/AykhanUV/mc/releases/download/1.21.30.03/Minecraft-v1.21.51.02-arm64-v8a-compressed.apk' }
+  { name: 'Minecraft', logo: 'minecraft.png', desc: 'Minecraft v1.21.51, arm64-v8a apk. Music is cut off to reduce file size', downloadLink: 'https://github.com/AykhanUV/mc/releases/download/1.21.30.03/minecraft-1-21-51-01-arm64-v8a-xbox-servers-compressed.apk' }
 ]
 
 function App() {
