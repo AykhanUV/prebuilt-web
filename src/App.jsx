@@ -15,29 +15,26 @@ const apks = [
 
 function App() {
   useEffect(() => {
-    const createStar = (size) => {
-      const star = document.createElement('div')
-      star.className = `star ${size}`
-      star.style.top = `${Math.random() * 100}vh`
-      star.style.left = `${Math.random() * 100}vw`
-      star.style.animationDuration = `${Math.random() * 10 + 5}s, 2s`
-      document.querySelector('.starry-night').appendChild(star)
-    }
+    const backgroundAnimation = document.createElement('div')
+    backgroundAnimation.className = 'background-animation'
+    document.body.appendChild(backgroundAnimation)
 
-    for (let i = 0; i < 100; i++) {
-      createStar('small')
-    }
-    for (let i = 0; i < 60; i++) {
-      createStar('medium')
-    }
-    for (let i = 0; i < 40; i++) {
-      createStar('large')
+    for (let i = 0; i < 50; i++) {
+      const ball = document.createElement('div')
+      ball.className = 'ball'
+      ball.style.top = `${Math.random() * 100}vh`
+      ball.style.left = `${Math.random() * 100}vw`
+      ball.style.width = `${Math.random() * 30 + 10}px`
+      ball.style.height = ball.style.width
+      ball.style.backgroundColor = Math.random() > 0.5 ? 'rgba(0, 0, 255, 0.5)' : 'rgba(128, 128, 128, 0.5)'
+      ball.style.animationDelay = `${Math.random() * 5}s`
+      ball.style.animationDuration = `${Math.random() * 3 + 2}s` // Random duration between 2s and 5s
+      backgroundAnimation.appendChild(ball)
     }
   }, [])
 
   return (
     <div className="app">
-      <div className="starry-night"></div>
       <h1 className="fade-in">APK Center</h1>
       <div className="apk-sections">
         {apks.map((apk, index) => (
