@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react'
 
 const apks = [
-  { name: 'Afnify', logo: 'afnify.png', desc: 'This app is modified YouTube app with no ads and custom features(Mostly up to date)', downloadLink: 'https://github.com/AykhanUV/Afnify/releases/download/Afnify(19.28.42)/Afnify.apk' },
-  { name: 'AfnMusic', logo: 'afnmusic.png', desc: 'This app is modified YouTube Music app with no ads and custom features', downloadLink: 'https://github.com/AykhanUV/AfnMusic/releases/download/AfnMusic(7.25.53)/AfnMusic.apk' },
-  { name: 'MicroG', logo: 'microg.png', desc: 'Just MicroG required for YT products', downloadLink: 'https://github.com/AykhanUV/MicroG/releases/download/2.5/MicroG-signed.apk' },
-  { name: 'AfnPlayer', logo: 'afnplayer.png', desc: 'An Android native video player', downloadLink: 'https://github.com/AykhanUV/AfnPlayer/releases/download/v1.0/AfnPlayer-arm64-v8a.apk' },
-  { name: 'Symphony', logo: 'symphony.png', desc: 'Lightweight, elegant music player for Android 9+ ', downloadLink: 'https://github.com/AykhanUV/Symphony/releases/download/v2024.4.111/Symphony.apk' },
-  { name: 'Photomath', logo: 'photomath.png', desc: 'Modded version of Photomath', downloadLink: 'https://github.com/AykhanUV/mc/releases/download/1.21.30.03/PhotoMath.v8.37.0.Rollback.apk' },
-  { name: 'Spotify', logo: 'spotify.png', desc: 'Modded version of Spotify', downloadLink: 'https://github.com/AykhanUV/mc/releases/download/1.21.30.03/Spotify.v9.02.459.Experimental.Merged.apk' },
-  { name: 'YT-Extended', logo: 'yt-extended.png', desc: 'This app is modified YouTube app with no ads and custom features(Difference from Afnify is branding and version/patches)', downloadLink: 'https://github.com/AykhanUV/YT-Extended/releases/download/YT-Extended(19.26.42)v2/YT-Extended.apk' },
-  { name: 'TikTok', logo: 'tiktok.png', desc: 'Modified TikTok. No ads, watermark-free downloads.', downloadLink: 'https://github.com/AykhanUV/AfnTikTok/releases/download/v36.5.4(v2)/AfnTikTok.apk' },
-  { name: 'Minecraft', logo: 'minecraft.png', desc: 'Minecraft v1.21.51, arm64-v8a apk. Music is cut off to reduce file size', downloadLink: 'https://github.com/AykhanUV/mc/releases/download/1.21.30.03/minecraft-1-21-51-01-arm64-v8a-xbox-servers-compressed.apk' }
+  { name: 'Afnify', logo: 'afnify.png', desc: 'This app is modified YouTube app with no ads and custom features(Mostly up to date)', downloadLink: 'https://github.com/AykhanUV/Afnify/releases/download/Afnify(19.28.42)/Afnify.apk', version: '19.28.42' },
+  { name: 'AfnMusic', logo: 'afnmusic.png', desc: 'This app is modified YouTube Music app with no ads and custom features', downloadLink: 'https://github.com/AykhanUV/AfnMusic/releases/download/AfnMusic(7.25.53)/AfnMusic.apk', version: '7.25.53' },
+  { name: 'MicroG', logo: 'microg.png', desc: 'Just MicroG required for YT products', downloadLink: 'https://github.com/AykhanUV/MicroG/releases/download/2.5/MicroG-signed.apk', version: '2.5' },
+  { name: 'AfnPlayer', logo: 'afnplayer.png', desc: 'An Android native video player', downloadLink: 'https://github.com/AykhanUV/AfnPlayer/releases/download/v1.0/AfnPlayer-arm64-v8a.apk', version: '1.0' },
+  { name: 'Symphony', logo: 'symphony.png', desc: 'Lightweight, elegant music player for Android 9+ ', downloadLink: 'https://github.com/AykhanUV/Symphony/releases/download/v2024.4.111/Symphony.apk', version: '2024.4.111' },
+  { name: 'Photomath', logo: 'photomath.png', desc: 'Modded version of Photomath', downloadLink: 'https://github.com/AykhanUV/mc/releases/download/1.21.30.03/PhotoMath.v8.37.0.Rollback.apk', version: '8.37.0' },
+  { name: 'Spotify', logo: 'spotify.png', desc: 'Modded version of Spotify', downloadLink: 'https://github.com/AykhanUV/mc/releases/download/1.21.30.03/Spotify.v9.02.459.Experimental.Merged.apk', version: '9.02.459' },
+  { name: 'YT-Extended', logo: 'yt-extended.png', desc: 'This app is modified YouTube app with no ads and custom features(Difference from Afnify is branding and version/patches)', downloadLink: 'https://github.com/AykhanUV/YT-Extended/releases/download/YT-Extended(19.26.42)v2/YT-Extended.apk', version: '19.26.42' },
+  { name: 'TikTok', logo: 'tiktok.png', desc: 'Modified TikTok. No ads, watermark-free downloads.', downloadLink: 'https://github.com/AykhanUV/AfnTikTok/releases/download/v36.5.4(v2)/AfnTikTok.apk', version: '36.5.4' },
+  { name: 'Minecraft', logo: 'minecraft.png', desc: 'Minecraft v1.21.51, arm64-v8a apk. Music is cut off to reduce file size', downloadLink: 'https://github.com/AykhanUV/mc/releases/download/1.21.30.03/minecraft-1-21-51-01-arm64-v8a-xbox-servers-compressed.apk', version: '1.21.51' }
 ]
 
 function App() {
@@ -43,6 +43,7 @@ function App() {
         {apks.map((apk, index) => (
           <div key={index} className="apk-section fade-in">
             <h2>{apk.name}</h2>
+            <p className="version-text">Version: {apk.version}</p>
             <img src={`/${apk.logo}`} alt={apk.name} />
             <p>{apk.desc}</p>
             <button onClick={() => window.open(apk.downloadLink, '_blank')}>Download</button>

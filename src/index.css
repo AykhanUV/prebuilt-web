@@ -151,3 +151,9 @@ body {
     opacity: 1;
   }
 }
+
+.version-text {
+  font-size: 14px;
+  color: #aaaaaa;
+  margin: 5px 0;
+}
