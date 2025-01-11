@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 
 const apks = [
-  { name: 'Afnify', logo: 'afnify.png', desc: 'This app is modified YouTube app with no ads and custom features(Mostly up to date)', downloadLink: 'https://github.com/AykhanUV/Afnify/releases/download/Afnify(19.26.42)v7/Afnify.apk' },
+  { name: 'Afnify', logo: 'afnify.png', desc: 'This app is modified YouTube app with no ads and custom features(Mostly up to date)', downloadLink: 'https://github.com/AykhanUV/Afnify/releases/download/Afnify(19.28.42)/Afnify.apk' },
   { name: 'AfnMusic', logo: 'afnmusic.png', desc: 'This app is modified YouTube Music app with no ads and custom features', downloadLink: 'https://github.com/AykhanUV/AfnMusic/releases/download/AfnMusic(7.25.53)/AfnMusic.apk' },
   { name: 'MicroG', logo: 'microg.png', desc: 'Just MicroG required for YT products', downloadLink: 'https://github.com/AykhanUV/MicroG/releases/download/2.5/MicroG-signed.apk' },
   { name: 'AfnPlayer', logo: 'afnplayer.png', desc: 'An Android native video player', downloadLink: 'https://github.com/AykhanUV/AfnPlayer/releases/download/v1.0/AfnPlayer-arm64-v8a.apk' },
