@@ -158,3 +158,27 @@ body {
     transform: scale(1.5);
   }
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.header .fab {
+  margin-left: 10px;
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+}
+
+.header .fab:hover {
+  color: #4078c0; /* GitHub blue */
+}

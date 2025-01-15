@@ -37,7 +37,12 @@ function App() {
 
   return (
     <div className="app">
-      <h1 className="fade-in">APK Center</h1>
+      <div className="header fade-in">
+        <h1>APK Center</h1>
+        <a href="https://github.com/AykhanUV/prebuilt-web" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-github"></i>
+        </a>
+      </div>
       <div className="apk-sections">
         {apks.map((apk, index) => (
           <div key={index} className="apk-section fade-in">
