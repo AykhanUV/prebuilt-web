@@ -17,7 +17,7 @@ body {
   padding: 20px;
   position: relative;
   z-index: 1;
-  min-height: 100vh; /* Ensure the app takes at least the full viewport height */
+  min-height: 100vh;
 }
 
 .apk-sections {
@@ -36,8 +36,8 @@ body {
   text-align: center;
   border-radius: 8px;
   box-sizing: border-box;
-  background: rgba(30, 30, 30, 0.5); /* Lower opacity background to 50% */
-  position: relative; /* Ensure the content is positioned relative to the section */
+  background: rgba(30, 30, 30, 0.5);
+  position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
@@ -53,8 +53,8 @@ body {
 .apk-section h2,
 .apk-section p,
 .apk-section button {
-  position: relative; /* Ensure these elements are positioned relative to the section */
-  z-index: 1; /* Place these elements above the background */
+  position: relative;
+  z-index: 1;
 }
 
 .apk-section img {
@@ -67,17 +67,20 @@ body {
 .apk-section button {
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #ff0000; /* Red background */
+  background-color: transparent;
   color: white;
-  border: none;
+  border: 2px solid white;
   cursor: pointer;
-  border-radius: 4px;
-  transition: transform 0.2s, background-color 0.2s; /* Add a transition for the hover effect */
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.2s;
 }
 
 .apk-section button:hover {
-  background-color: #cc0000; /* Darker red on hover */
-  transform: scale(1.05); /* Slightly enlarge the button on hover */
+  background-color: white;
+  color: #000000;
+  transform: scale(1.05);
 }
 
 .footer {
@@ -86,7 +89,7 @@ body {
   padding: 10px;
   position: relative;
   bottom: 0;
-  margin-top: auto; /* Push the footer to the bottom */
+  margin-top: auto;
 }
 
 .fade-in {
@@ -143,10 +146,10 @@ body {
 
 @keyframes changeColor {
   0%, 100% {
-    background: rgba(0, 0, 255, 0.5); /* Blue */
+    background: rgba(0, 0, 255, 0.5);
   }
   50% {
-    background: rgba(128, 128, 128, 0.5); /* Gray */
+    background: rgba(128, 128, 128, 0.5);
   }
 }
 
@@ -180,5 +183,38 @@ body {
 }
 
 .header .fab:hover {
-  color: #4078c0; /* GitHub blue */
+  color: #4078c0;
+}
+
+.content {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.content p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.back-home-button {
+  padding: 15px 30px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.2s;
+}
+
+.back-home-button:hover {
+  background-color: white;
+  color: #000000;
+  transform: scale(1.1);
 }
