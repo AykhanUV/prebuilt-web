@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 
 const apks = [
-  { name: 'Afnify', logo: 'afnify.png', desc: 'This app is modified YouTube app with no ads and custom features(Mostly up to date)', downloadLink: 'https://github.com/AykhanUV/Afnify/releases/download/Afnify(19.28.42)/Afnify.apk', version: '19.28.42' },
-  { name: 'AfnMusic', logo: 'afnmusic.png', desc: 'This app is modified YouTube Music app with no ads and custom features', downloadLink: 'https://github.com/AykhanUV/AfnMusic/releases/download/AfnMusic(7.16.53)v4/AfnMusic.apk', version: '7.16.53' },
+  { name: 'Afnify', logo: 'afnify.png', desc: 'This app is modified YouTube app with no ads and custom features(Mostly up to date)', downloadLink: 'https://github.com/AykhanUV/Afnify/releases/download/Afnify(20.05.44)/Afnify.apk', version: '19.28.42' },
+  { name: 'AfnMusic', logo: 'afnmusic.png', desc: 'This app is modified YouTube Music app with no ads and custom features', downloadLink: 'https://github.com/AykhanUV/AfnMusic/releases/download/AfnMusic(7.16.53)v5/AfnMusic.apk', version: '7.16.53' },
   { name: 'MicroG', logo: 'microg.png', desc: 'Just MicroG required for YT products', downloadLink: 'https://github.com/AykhanUV/MicroG/releases/download/2.5/MicroG-signed.apk', version: '2.5' },
   { name: 'AfnPlayer', logo: 'afnplayer.png', desc: 'An Android native video player', downloadLink: 'https://github.com/AykhanUV/AfnPlayer/releases/download/v1.0/AfnPlayer-arm64-v8a.apk', version: '1.0' },
   { name: 'Symphony', logo: 'symphony.png', desc: 'Lightweight, elegant music player for Android 9+ ', downloadLink: 'https://github.com/AykhanUV/Symphony/releases/download/v2024.4.111/Symphony.apk', version: '2024.4.111' },
