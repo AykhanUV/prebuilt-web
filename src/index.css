@@ -1,10 +1,10 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #000000;
-  color: #ffffff;
+  background-color: #000000;
+  color: #e0e0e0;
   overflow-x: hidden;
   overflow-y: auto;
   position: relative;
@@ -29,24 +29,25 @@ body {
 }
 
 .apk-section {
-  border: 1px solid #444;
   padding: 20px;
   margin: 10px;
   width: 300px;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 12px;
   box-sizing: border-box;
-  background: rgba(30, 30, 30, 0.5);
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
+  opacity: 1;
   animation: fadeIn 1s forwards;
+  backdrop-filter: none;
+  border: 1px solid #ffffff;
 }
 
 .apk-section:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .apk-section img,
@@ -62,34 +63,43 @@ body {
   max-height: 100px;
   margin: 10px 0;
   border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.apk-section:hover img {
+  transform: scale(1.1);
 }
 
 .apk-section button {
   margin-top: 10px;
   padding: 10px 20px;
   background-color: transparent;
-  color: white;
-  border: 2px solid white;
+  color: #e0e0e0;
+  border: 2px solid #e0e0e0;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: 50px;
   text-decoration: none;
   font-size: 1em;
   transition: background-color 0.5s ease, color 0.5s ease, transform 0.2s;
 }
 
 .apk-section button:hover {
-  background-color: white;
-  color: #000000;
-  transform: scale(1.05);
+  background-color: #bbbbbb;
+  color: #121212;
+  transform: scale(1.1);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .footer {
   width: 100%;
   text-align: center;
-  padding: 10px;
+  padding: 0px;
   position: relative;
   bottom: 0;
-  margin-top: auto;
+  margin-top: 30px;
+  background-color: transparent;
+  border-top: none;
+  color: #e0e0e0;
 }
 
 .fade-in {
@@ -123,42 +133,34 @@ body {
 .background-animation .ball {
   position: absolute;
   border-radius: 50%;
-  animation: moveBall 5s linear infinite, changeColor 5s ease-in-out infinite, changeSize 5s ease-in-out infinite;
+  animation: moveBall 3s linear infinite, changeColor 3s ease-in-out infinite, changeSize 3s ease-in-out infinite;
+  opacity: 0.5;
 }
 
 @keyframes moveBall {
   0% {
     transform: translate(0, 0);
   }
-  25% {
-    transform: translate(100vw, 0);
-  }
-  50% {
-    transform: translate(100vw, 100vh);
-  }
-  75% {
-    transform: translate(0, 100vh);
-  }
   100% {
-    transform: translate(0, 0);
+    transform: translate(150vw, 150vh);
   }
 }
 
 @keyframes changeColor {
   0%, 100% {
-    background: rgba(0, 0, 255, 0.5);
+    background: rgba(128, 128, 128, 0.5);
   }
   50% {
-    background: rgba(128, 128, 128, 0.5);
+    background: rgba(0, 0, 255, 0.5);
   }
 }
 
 @keyframes changeSize {
   0%, 100% {
-    transform: scale(1);
+    transform: scale(0.5);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(2.5);
   }
 }
 
@@ -167,23 +169,29 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .header h1 {
   margin: 0;
   font-size: 2.5em;
   font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 .header .fab {
   margin-left: 10px;
   font-size: 24px;
-  color: #333;
+  color: #e0e0e0;
   text-decoration: none;
 }
 
 .header .fab:hover {
-  color: #4078c0;
+  color: #bbbbbb;
 }
 
 .content {

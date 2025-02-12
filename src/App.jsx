@@ -26,11 +26,11 @@ function App() {
       ball.className = 'ball'
       ball.style.top = `${Math.random() * 100}vh`
       ball.style.left = `${Math.random() * 100}vw`
-      ball.style.width = `${Math.random() * 30 + 10}px`
+      ball.style.width = '20px'
       ball.style.height = ball.style.width
-      ball.style.backgroundColor = Math.random() > 0.5 ? 'rgba(0, 0, 255, 0.5)' : 'rgba(128, 128, 128, 0.5)'
+      ball.style.backgroundColor = 'rgba(128, 128, 128, 0.5)'
       ball.style.animationDelay = `${Math.random() * 5}s`
-      ball.style.animationDuration = `${Math.random() * 3 + 2}s` // Random duration between 2s and 5s
+      ball.style.animationDuration = `${Math.random() * 3 + 3}s`
       backgroundAnimation.appendChild(ball)
     }
   }, [])
