@@ -12,7 +12,7 @@ const apks = [
   { name: 'TikTok', logo: 'tiktok.png', desc: 'Modified TikTok. No ads, watermark-free downloads.', downloadLink: 'https://github.com/AykhanUV/AfnTikTok/releases/download/v36.5.4(v2)/AfnTikTok.apk', version: '36.5.4' },
   { name: 'Minecraft', logo: 'minecraft.png', desc: 'Minecraft v1.21.51, arm64-v8a apk. Music is cut off to reduce file size', downloadLink: 'https://github.com/AykhanUV/mc/releases/download/1.21.30.03/minecraft-1-21-51-01-arm64-v8a-xbox-servers-compressed.apk', version: '1.21.51' },
   { name: 'Seal', logo: 'seal.png', desc: '🦭 Video/Audio Downloader for Android, based on yt-dlp, designed with Material You', downloadLink: 'https://github.com/JunkFood02/Seal/releases/download/v1.13.1/Seal-1.13.1-arm64-v8a-release.apk', version: '1.13.1' },
-  { name: 'YTDLnis', logo: 'ytdlnis.png', desc: 'Android Video/Audio Downloader app using yt-dlp ', downloadLink: 'https://github.com/deniscerri/ytdlnis/releases/download/v1.8.1.2/YTDLnis-1.8.1.2-arm64-v8a-release.apk', version: '1.8.1.2' }
+  { name: 'YTDLnis', logo: 'ytdlnis.png', desc: 'Android Video/Audio Downloader app using yt-dlp ', downloadLink: 'https://github.com/deniscerri/ytdlnis/releases/download/v1.8.2/YTDLnis-1.8.2-arm64-v8a-release.apk', version: '1.8.1.2' }
 ]
 
 function App() {
