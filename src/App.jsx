@@ -1,21 +1,8 @@
-import React, { useEffect } from 'react'
-
-const apks = [
-  { name: 'Afnify', logo: 'afnify.png', desc: 'This app is modified YouTube app with no ads and custom features(Mostly up to date)', downloadLink: 'https://github.com/AykhanUV/Afnify/releases/download/Afnify(20.09.41)/Afnify.apk', version: '20.09.41' },
-  { name: 'AfnMusic', logo: 'afnmusic.png', desc: 'This app is modified YouTube Music app with no ads and custom features', downloadLink: 'https://github.com/AykhanUV/AfnMusic/releases/download/AfnMusic(8.10.51)/AfnMusic.apk', version: '8.10.51' },
-  { name: 'MicroG', logo: 'microg.png', desc: 'Just MicroG required for YT products', downloadLink: 'https://github.com/AykhanUV/MicroG/releases/download/2.5/MicroG-signed.apk', version: '2.5' },
-  { name: 'AfnPlayer', logo: 'afnplayer.png', desc: 'An Android native video player', downloadLink: 'https://github.com/AykhanUV/AfnPlayer/releases/download/v1.0/AfnPlayer-arm64-v8a.apk', version: '1.0' },
-  { name: 'Symphony', logo: 'symphony.png', desc: 'Lightweight, elegant music player for Android 9+ ', downloadLink: 'https://github.com/AykhanUV/Symphony/releases/download/v2024.4.111/Symphony.apk', version: '2024.4.111' },
-  { name: 'Photomath', logo: 'photomath.png', desc: 'Modded version of Photomath', downloadLink: 'https://github.com/AykhanUV/mc/releases/download/1.21.30.03/PhotoMath.v8.37.0.Rollback.apk', version: '8.37.0' },
-  { name: 'Spotify', logo: 'spotify.png', desc: 'Modded version of Spotify', downloadLink: 'https://github.com/AykhanUV/mc/releases/download/1.21.30.03/Spotify.v9.0.30.642.AB.Experimental.Merged.apk', version: '9.0.30.642' },
-  { name: 'YT-Extended', logo: 'yt-extended.png', desc: 'This app is modified YouTube app with no ads and custom features(Difference from Afnify is branding and version/patches)', downloadLink: 'https://github.com/AykhanUV/YT-Extended/releases/download/YT-Extended(19.26.42)v2/YT-Extended.apk', version: '19.26.42' },
-  { name: 'TikTok', logo: 'tiktok.png', desc: 'Modified TikTok. No ads, watermark-free downloads.', downloadLink: 'https://github.com/AykhanUV/AfnTikTok/releases/download/v36.5.4(v2)/AfnTikTok.apk', version: '36.5.4' },
-  { name: 'Minecraft', logo: 'minecraft.png', desc: 'Minecraft v1.21.51, arm64-v8a apk. Music is cut off to reduce file size', downloadLink: 'https://github.com/AykhanUV/mc/releases/download/1.21.30.03/minecraft-1-21-51-01-arm64-v8a-xbox-servers-compressed.apk', version: '1.21.51' },
-  { name: 'Seal', logo: 'seal.png', desc: '🦭 Video/Audio Downloader for Android, based on yt-dlp, designed with Material You', downloadLink: 'https://github.com/JunkFood02/Seal/releases/download/v1.13.1/Seal-1.13.1-arm64-v8a-release.apk', version: '1.13.1' },
-  { name: 'YTDLnis', logo: 'ytdlnis.png', desc: 'Android Video/Audio Downloader app using yt-dlp ', downloadLink: 'https://github.com/deniscerri/ytdlnis/releases/download/v1.8.3/YTDLnis-1.8.3-arm64-v8a-release.apk', version: '1.8.3' }
-]
+import React, { useState, useEffect } from 'react'
+import apksData from './apks.json'
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState('')
   useEffect(() => {
     const backgroundAnimation = document.createElement('div')
     backgroundAnimation.className = 'background-animation'
@@ -35,24 +22,46 @@ function App() {
     }
   }, [])
 
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value)
+  }
+
+  const filteredApks = apksData.filter(apk =>
+    apk.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    apk.desc.toLowerCase().includes(searchTerm.toLowerCase())
+  )
+
   return (
     <div className="app">
       <div className="header fade-in">
         <h1>APK Center</h1>
-        <a href="https://github.com/AykhanUV/prebuilt-web" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/AykhanUV/prebuilt-web" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
           <i className="fab fa-github"></i>
         </a>
       </div>
+      <div className="search-container fade-in">
+        <input
+          type="text"
+          placeholder="Search APKs by name or description..."
+          value={searchTerm}
+          onChange={handleSearchChange}
+          className="search-input"
+        />
+      </div>
       <div className="apk-sections">
-        {apks.map((apk, index) => (
-          <div key={index} className="apk-section fade-in">
-            <h2>{apk.name}</h2>
-            <p className="version-text">Version: {apk.version}</p>
-            <img src={`/${apk.logo}`} alt={apk.name} />
-            <p>{apk.desc}</p>
-            <button onClick={() => window.open(apk.downloadLink, '_blank')}>Download</button>
-          </div>
-        ))}
+        {filteredApks.length > 0 ? (
+          filteredApks.map((apk, index) => (
+            <div key={index} className="apk-section fade-in">
+              <h2>{apk.name}</h2>
+              <p className="version-text">Version: {apk.version}</p>
+              <img src={`/${apk.logo}`} alt={`${apk.name} logo`} />
+              <p>{apk.desc}</p>
+              <button onClick={() => window.open(apk.downloadLink, '_blank')}>Download</button>
+            </div>
+          ))
+        ) : (
+          <p className="no-results">No matching APKs found.</p>
+        )}
       </div>
       <div className="footer fade-in">
         <p>&copy; 2024 AykhanUV</p>
