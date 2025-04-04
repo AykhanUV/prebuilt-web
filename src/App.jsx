@@ -69,7 +69,11 @@ function App() {
       <div className="apk-sections">
         {filteredApks.length > 0 ? (
           filteredApks.map((apk, index) => (
-            <div key={index} className="apk-section fade-in">
+            <div
+              key={index}
+              className="apk-section fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
               <h2>{apk.name}</h2>
               <p className="version-text">{t('versionPrefix')} {apk.version}</p>
               <img src={`/${apk.logo}`} alt={`${apk.name} logo`} />
