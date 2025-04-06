@@ -5,7 +5,7 @@
   { "name": "AfnPlayer", "logo": "afnplayer.png", "descKey": "apkDesc_AfnPlayer", "downloadLink": "https://github.com/AykhanUV/AfnPlayer/releases/download/v1.0/AfnPlayer-arm64-v8a.apk", "version": "1.0" },
   { "name": "Symphony", "logo": "symphony.png", "descKey": "apkDesc_Symphony", "downloadLink": "https://github.com/AykhanUV/Symphony/releases/download/v2024.4.111/Symphony.apk", "version": "2024.4.111" },
   { "name": "Photomath", "logo": "photomath.png", "descKey": "apkDesc_Photomath", "downloadLink": "https://github.com/AykhanUV/mc/releases/download/1.21.30.03/PhotoMath.v8.37.0.Rollback.apk", "version": "8.37.0" },
-  { "name": "Spotify", "logo": "spotify.png", "descKey": "apkDesc_Spotify", "downloadLink": "https://github.com/AykhanUV/mc/releases/download/1.21.30.03/Spotify.v9.0.30.642.AB.Experimental.Merged.apk", "version": "9.0.30.642" },
+  { "name": "Spotify", "logo": "spotify.png", "descKey": "apkDesc_Spotify", "downloadLink": "https://github.com/AykhanUV/mc/releases/download/1.21.30.03/Spotify.v9.0.32.624.AB.Stable.Merged.apk", "version": "9.0.32.624" },
   { "name": "YT-Extended", "logo": "yt-extended.png", "descKey": "apkDesc_YT-Extended", "downloadLink": "https://github.com/AykhanUV/YT-Extended/releases/download/YT-Extended(19.26.42)v2/YT-Extended.apk", "version": "19.26.42", "requiresMicroG": true },
   { "name": "TikTok", "logo": "tiktok.png", "descKey": "apkDesc_TikTok", "downloadLink": "https://github.com/AykhanUV/AfnTikTok/releases/download/v36.5.4(v2)/AfnTikTok.apk", "version": "36.5.4" },
   { "name": "Minecraft", "logo": "minecraft.png", "descKey": "apkDesc_Minecraft", "downloadLink": "https://github.com/AykhanUV/mc/releases/download/1.21.30.03/minecraft-1-21-51-01-arm64-v8a-xbox-servers-compressed.apk", "version": "1.21.51" },
