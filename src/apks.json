@@ -7,8 +7,8 @@
     "assetPattern": "Afnify.apk",
     "logo": "afnify.png",
     "descKey": "apkDesc_Afnify",
-    "downloadLink": "https://github.com/AykhanUV/Afnify/releases/download/Afnify(20.09.41)/Afnify.apk",
-    "version": "20.09.41",
+    "downloadLink": "https://github.com/AykhanUV/Afnify/releases/download/Afnify%2820.11.37%29/Afnify.apk",
+    "version": "20.11.37",
     "requiresMicroG": true
   },
   {
@@ -19,8 +19,8 @@
     "assetPattern": "AfnMusic.apk",
     "logo": "afnmusic.png",
     "descKey": "apkDesc_AfnMusic",
-    "downloadLink": "https://github.com/AykhanUV/AfnMusic/releases/download/AfnMusic(8.10.51)/AfnMusic.apk",
-    "version": "8.10.51",
+    "downloadLink": "https://github.com/AykhanUV/AfnMusic/releases/download/AfnMusic%288.12.53%29/AfnMusic.apk",
+    "version": "8.12.53",
     "requiresMicroG": true
   },
   {
