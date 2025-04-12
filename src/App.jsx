@@ -52,6 +52,15 @@ function App() {
     )
   })
 
+  const handleDownload = (downloadUrl, apkName) => {
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.setAttribute('download', `${apkName}.apk`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="app">
       <div className="header fade-in">
@@ -93,7 +102,7 @@ function App() {
                   <span>{t('requiresMicroG')}</span>
                 </div>
               )}
-              <button onClick={() => window.open(apk.downloadLink, '_blank')}>{t('downloadButton')}</button>
+              <button onClick={() => handleDownload(apk.downloadLink, apk.name)}>{t('downloadButton')}</button>
               {apk.fileSize !== undefined && (
                  <p className="apk-meta">{t('fileSizeLabel', 'Size:')} {formatFileSize(apk.fileSize)}</p>
               )}
