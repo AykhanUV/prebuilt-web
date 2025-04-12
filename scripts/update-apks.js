@@ -100,8 +100,12 @@ async function getLatestReleaseInfo(appConfig) {
         }
 
         if (version && downloadLink) {
-            console.log(`  Found potential update: ${name} v${version}`);
-            return { version, downloadLink };
+            console.log(`  Found potential update: ${name} v${version} (Size: ${matchingAsset.size})`);
+            return {
+                version,
+                downloadLink,
+                fileSize: matchingAsset.size
+            };
         } else {
              console.warn(`Skipping ${name}: Could not determine version or download link.`);
             return null;
@@ -136,31 +140,31 @@ async function updateApks() {
         const latestInfo = await getLatestReleaseInfo(appConfig);
 
         if (latestInfo) {
+            const mergedData = {
+                ...appConfig,
+                ...latestInfo
+            };
+
             if (latestInfo.version !== appConfig.version) {
-                 console.log(`  Updating ${appConfig.name}: ${appConfig.version} -> ${latestInfo.version}`);
-                 updatedApksData[i] = {
-                     ...appConfig,
-                     version: latestInfo.version,
-                     downloadLink: latestInfo.downloadLink
-                 };
-                 updatesMade = true;
+                console.log(`  Updating ${appConfig.name}: ${appConfig.version} -> ${latestInfo.version}`);
+                updatesMade = true;
             } else {
-                console.log(`  No update needed for ${appConfig.name} (v${appConfig.version} is latest).`);
+                 console.log(`  Refreshed data for ${appConfig.name} (v${appConfig.version}).`);
             }
+            updatedApksData[i] = mergedData;
+        } else {
+             updatedApksData[i] = appConfig;
         }
         await new Promise(resolve => setTimeout(resolve, 200));
     }
 
-    if (updatesMade) {
-        console.log("Updates found. Writing changes back to apks.json...");
-        try {
-            await fs.writeFile(APKS_JSON_PATH, JSON.stringify(updatedApksData, null, 2), 'utf-8');
-            console.log("Successfully updated apks.json.");
-        } catch (error) {
-            console.error("Failed to write updates to apks.json:", error);
-        }
-    } else {
-        console.log("No updates required for any apps.");
+    console.log("Finished checking apps. Writing current data back to apks.json...");
+    try {
+        console.log("Data to be written:", JSON.stringify(updatedApksData, null, 2));
+        await fs.writeFile(APKS_JSON_PATH, JSON.stringify(updatedApksData, null, 2), 'utf-8');
+        console.log("Successfully updated apks.json.");
+    } catch (error) {
+        console.error("Failed to write updates to apks.json:", error);
     }
 }
 

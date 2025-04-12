@@ -3,6 +3,15 @@ import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from './LanguageSwitcher'
 import apksData from './apks.json'
 
+function formatFileSize(bytes) {
+  if (bytes === undefined || bytes === null || isNaN(bytes)) return '';
+  if (bytes === 0) return '0 Bytes';
+  const k = 1024;
+  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+}
+
 function App() {
   const { t } = useTranslation()
   const [searchTerm, setSearchTerm] = useState('')
@@ -85,6 +94,9 @@ function App() {
                 </div>
               )}
               <button onClick={() => window.open(apk.downloadLink, '_blank')}>{t('downloadButton')}</button>
+              {apk.fileSize !== undefined && (
+                 <p className="apk-meta">{t('fileSizeLabel', 'Size:')} {formatFileSize(apk.fileSize)}</p>
+              )}
             </div>
           ))
         ) : (

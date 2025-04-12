@@ -133,7 +133,13 @@ body {
 .version-text {
   font-size: 14px;
   color: #aaaaaa;
-  margin: 5px 0;
+  margin: 2px 0 5px 0;
+}
+
+.apk-meta {
+  font-size: 14px;
+  color: #aaaaaa;
+  margin: 2px 0 5px 0;
 }
 
 .background-animation {
