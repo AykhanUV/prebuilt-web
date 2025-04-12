@@ -9,7 +9,8 @@
     "descKey": "apkDesc_Afnify",
     "downloadLink": "https://github.com/AykhanUV/Afnify/releases/download/Afnify%2820.11.37%29/Afnify.apk",
     "version": "20.11.37",
-    "requiresMicroG": true
+    "requiresMicroG": true,
+    "fileSize": 85694996
   },
   {
     "name": "AfnMusic",
@@ -21,7 +22,8 @@
     "descKey": "apkDesc_AfnMusic",
     "downloadLink": "https://github.com/AykhanUV/AfnMusic/releases/download/AfnMusic%288.12.53%29/AfnMusic.apk",
     "version": "8.12.53",
-    "requiresMicroG": true
+    "requiresMicroG": true,
+    "fileSize": 65623015
   },
   {
     "name": "MicroG",
@@ -31,7 +33,8 @@
     "logo": "microg.png",
     "descKey": "apkDesc_MicroG",
     "downloadLink": "https://github.com/AykhanUV/MicroG/releases/download/2.5/MicroG-signed.apk",
-    "version": "2.5"
+    "version": "2.5",
+    "fileSize": 11845083
   },
   {
     "name": "AfnPlayer",
@@ -41,7 +44,8 @@
     "logo": "afnplayer.png",
     "descKey": "apkDesc_AfnPlayer",
     "downloadLink": "https://github.com/AykhanUV/AfnPlayer/releases/download/v1.0/AfnPlayer-arm64-v8a.apk",
-    "version": "1.0"
+    "version": "1.0",
+    "fileSize": 9060647
   },
   {
     "name": "Symphony",
@@ -51,7 +55,8 @@
     "logo": "symphony.png",
     "descKey": "apkDesc_Symphony",
     "downloadLink": "https://github.com/AykhanUV/Symphony/releases/download/v2024.4.111/Symphony.apk",
-    "version": "2024.4.111"
+    "version": "2024.4.111",
+    "fileSize": 5750257
   },
   {
     "name": "Photomath",
@@ -61,7 +66,8 @@
     "logo": "photomath.png",
     "descKey": "apkDesc_Photomath",
     "downloadLink": "https://github.com/AykhanUV/mc/releases/download/1.21.30.03/PhotoMath-8.43.0.apk",
-    "version": "8.43.0"
+    "version": "8.43.0",
+    "fileSize": 16441711
   },
   {
     "name": "Spotify",
@@ -71,7 +77,8 @@
     "logo": "spotify.png",
     "descKey": "apkDesc_Spotify",
     "downloadLink": "https://github.com/AykhanUV/mc/releases/download/1.21.30.03/Spotify-9.0.34.593.apk",
-    "version": "9.0.34.593"
+    "version": "9.0.34.593",
+    "fileSize": 47523474
   },
   {
     "name": "YT-Extended",
@@ -81,9 +88,10 @@
     "assetPattern": "YT-Extended.apk",
     "logo": "yt-extended.png",
     "descKey": "apkDesc_YT-Extended",
-    "downloadLink": "https://github.com/AykhanUV/YT-Extended/releases/download/YT-Extended(19.26.42)v2/YT-Extended.apk",
+    "downloadLink": "https://github.com/AykhanUV/YT-Extended/releases/download/YT-Extended%2819.26.42%29v2/YT-Extended.apk",
     "version": "19.26.42",
-    "requiresMicroG": true
+    "requiresMicroG": true,
+    "fileSize": 83004303
   },
   {
     "name": "TikTok",
@@ -93,8 +101,9 @@
     "assetPattern": "AfnTikTok.apk",
     "logo": "tiktok.png",
     "descKey": "apkDesc_TikTok",
-    "downloadLink": "https://github.com/AykhanUV/AfnTikTok/releases/download/v36.5.4(v2)/AfnTikTok.apk",
-    "version": "36.5.4"
+    "downloadLink": "https://github.com/AykhanUV/AfnTikTok/releases/download/v36.5.4%28v2%29/AfnTikTok.apk",
+    "version": "36.5.4",
+    "fileSize": 419463695
   },
   {
     "name": "Minecraft",
@@ -104,7 +113,8 @@
     "logo": "minecraft.png",
     "descKey": "apkDesc_Minecraft",
     "downloadLink": "https://github.com/AykhanUV/mc/releases/download/1.21.30.03/Minecraft-1.21.72.01.apk",
-    "version": "1.21.72.01"
+    "version": "1.21.72.01",
+    "fileSize": 270225366
   },
   {
     "name": "Seal",
@@ -114,7 +124,8 @@
     "logo": "seal.png",
     "descKey": "apkDesc_Seal",
     "downloadLink": "https://github.com/JunkFood02/Seal/releases/download/v1.13.1/Seal-1.13.1-arm64-v8a-release.apk",
-    "version": "1.13.1"
+    "version": "1.13.1",
+    "fileSize": 43069442
   },
   {
     "name": "YTDLnis",
@@ -124,6 +135,7 @@
     "logo": "ytdlnis.png",
     "descKey": "apkDesc_YTDLnis",
     "downloadLink": "https://github.com/deniscerri/ytdlnis/releases/download/v1.8.4/YTDLnis-1.8.4-arm64-v8a-release.apk",
-    "version": "1.8.4"
+    "version": "1.8.4",
+    "fileSize": 45219428
   }
 ]
