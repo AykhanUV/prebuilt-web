@@ -12,12 +12,38 @@ function formatFileSize(bytes) {
   return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
 }
 
+function highlightMatch(text, term) {
+  if (!term) {
+    return text;
+  }
+  try {
+    const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(${escapedTerm})`, 'gi');
+    const parts = text.split(regex);
+
+    return parts.map((part, index) =>
+      regex.test(part) ? (
+        <span key={index} className="search-highlight">
+          {part}
+        </span>
+      ) : (
+        part
+      )
+    );
+  } catch (e) {
+    console.error("Error creating regex or highlighting:", e);
+    return text;
+  }
+}
+
 function App() {
   const { t } = useTranslation()
   const [searchTerm, setSearchTerm] = useState('')
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    const backgroundAnimation = document.createElement('div')
-    backgroundAnimation.className = 'background-animation'
+    const backgroundAnimation = document.createElement('div');
+    backgroundAnimation.className = 'background-animation';
     document.body.appendChild(backgroundAnimation)
 
     for (let i = 0; i < 50; i++) {
@@ -38,7 +64,15 @@ function App() {
 
       backgroundAnimation.appendChild(star)
     }
-  }, [])
+
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 150);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value)
@@ -85,17 +119,19 @@ function App() {
         />
       </div>
       <div className="apk-sections">
-        {filteredApks.length > 0 ? (
+        {isLoading ? (
+          <p className="loading-message">{t('loadingMessage', 'Loading...')}</p>
+        ) : filteredApks.length > 0 ? (
           filteredApks.map((apk, index) => (
             <div
               key={index}
               className="apk-section fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h2>{apk.name}</h2>
+              <h2>{highlightMatch(apk.name, searchTerm)}</h2>
               <p className="version-text">{t('versionPrefix')} {apk.version}</p>
               <img src={`/${apk.logo}`} alt={`${apk.name} logo`} />
-              <p>{t(apk.descKey)}</p>
+              <p>{highlightMatch(t(apk.descKey), searchTerm)}</p>
               {apk.requiresMicroG && (
                 <div className="microg-indicator">
                   <img src="/microg.png" alt="MicroG logo" className="microg-logo" />
