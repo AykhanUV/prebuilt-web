@@ -1,40 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { useTranslation } from 'react-i18next'
-import LanguageSwitcher from './LanguageSwitcher'
-import apksData from './apks.json'
+import { useTranslation } from 'react-i18next';
+import Header from './components/Header';
+import SearchBar from './components/SearchBar';
+import ApkList from './components/ApkList';
+import apksData from './apks.json';
 
-function formatFileSize(bytes) {
-  if (bytes === undefined || bytes === null || isNaN(bytes)) return '';
-  if (bytes === 0) return '0 Bytes';
-  const k = 1024;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
-  const i = Math.floor(Math.log(bytes) / Math.log(k));
-  return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
-}
-
-function highlightMatch(text, term) {
-  if (!term) {
-    return text;
-  }
-  try {
-    const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const regex = new RegExp(`(${escapedTerm})`, 'gi');
-    const parts = text.split(regex);
-
-    return parts.map((part, index) =>
-      regex.test(part) ? (
-        <span key={index} className="search-highlight">
-          {part}
-        </span>
-      ) : (
-        part
-      )
-    );
-  } catch (e) {
-    console.error("Error creating regex or highlighting:", e);
-    return text;
-  }
-}
 
 function App() {
   const { t } = useTranslation()
@@ -97,57 +67,14 @@ function App() {
 
   return (
     <div className="app">
-      <div className="header fade-in">
-        <div className="header-left">
-          <a href="https://github.com/AykhanUV/prebuilt-web" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
-            <i className="fab fa-github" aria-hidden="true"></i>
-            <span className="sr-only">{t('headerGithubLinkAlt')}</span>
-          </a>
-        </div>
-        <h1>{t('headerTitle')}</h1>
-        <div className="header-right">
-          <LanguageSwitcher />
-        </div>
-      </div>
-      <div className="search-container fade-in">
-        <input
-          type="text"
-          placeholder={t('searchPlaceholder')}
-          value={searchTerm}
-          onChange={handleSearchChange}
-          className="search-input"
-        />
-      </div>
-      <div className="apk-sections">
-        {isLoading ? (
-          <p className="loading-message">{t('loadingMessage', 'Loading...')}</p>
-        ) : filteredApks.length > 0 ? (
-          filteredApks.map((apk, index) => (
-            <div
-              key={index}
-              className="apk-section fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <h2>{highlightMatch(apk.name, searchTerm)}</h2>
-              <p className="version-text">{t('versionPrefix')} {apk.version}</p>
-              <img src={`/${apk.logo}`} alt={`${apk.name} logo`} />
-              <p>{highlightMatch(t(apk.descKey), searchTerm)}</p>
-              {apk.requiresMicroG && (
-                <div className="microg-indicator">
-                  <img src="/microg.png" alt="MicroG logo" className="microg-logo" />
-                  <span>{t('requiresMicroG')}</span>
-                </div>
-              )}
-              <button onClick={() => handleDownload(apk.downloadLink, apk.name)}>{t('downloadButton')}</button>
-              {apk.fileSize !== undefined && (
-                 <p className="apk-meta">{t('fileSizeLabel', 'Size:')} {formatFileSize(apk.fileSize)}</p>
-              )}
-            </div>
-          ))
-        ) : (
-          <p className="no-results">{t('noResults')}</p>
-        )}
-      </div>
+      <Header />
+      <SearchBar searchTerm={searchTerm} onSearchChange={handleSearchChange} />
+      <ApkList
+        isLoading={isLoading}
+        filteredApks={filteredApks}
+        searchTerm={searchTerm}
+        handleDownload={handleDownload}
+      />
       <div className="footer fade-in">
         <p>{t('footerCopyright')}</p>
       </div>
