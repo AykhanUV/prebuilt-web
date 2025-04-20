@@ -61,8 +61,26 @@ const ApkCard = ({ apk, searchTerm, handleDownload, index }) => {
       <button onClick={() => handleDownload(apk.downloadLink, apk.name)} disabled={!apk.downloadLink}>
         {t('downloadButton')}
       </button>
-      {apk.fileSize !== undefined && (
-         <p className="apk-meta">{t('fileSizeLabel', 'Size:')} {formatFileSize(apk.fileSize)}</p>
+      {(apk.fileSize !== undefined || apk.downloadLink) && (
+        <div className="apk-meta-container">
+          {apk.fileSize !== undefined && (
+            <p className="apk-meta">{t('fileSizeLabel', 'Size:')} {formatFileSize(apk.fileSize)}</p>
+          )}
+          {apk.downloadLink && (
+            <div className="virustotal-link-container">
+              <a
+                href={`https://www.virustotal.com/gui/search/${encodeURIComponent(encodeURIComponent(apk.downloadLink))}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="virustotal-link"
+                title={t('scanOnVirusTotal')}
+              >
+                <img src="/virustotal.svg" alt="VirusTotal Logo" className="virustotal-logo" />
+                <span>{t('scanOnVirusTotal')}</span>
+              </a>
+            </div>
+          )}
+        </div>
       )}
     </div>
   );

@@ -406,3 +406,49 @@ body {
   color: #aaaaaa;
   font-size: 1.2em;
 }
+
+.virustotal-link-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.virustotal-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #aaaaaa;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+.virustotal-link:hover {
+  color: #4468FF;
+  text-decoration: underline;
+}
+
+.virustotal-logo {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.apk-meta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 8px;
+  width: 100%;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.apk-meta-container .apk-meta {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.apk-meta-container .virustotal-link-container {
+  margin: 0;
+}
