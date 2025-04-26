@@ -32,9 +32,9 @@
     "assetPattern": "MicroG-signed.apk",
     "logo": "microg.png",
     "descKey": "apkDesc_MicroG",
-    "downloadLink": "https://github.com/AykhanUV/MicroG/releases/download/2.5/MicroG-signed.apk",
-    "version": "2.5",
-    "fileSize": 11845083
+    "downloadLink": "https://github.com/AykhanUV/MicroG/releases/download/3.0/MicroG-signed.apk",
+    "version": "3.0",
+    "fileSize": 12378239
   },
   {
     "name": "AfnPlayer",
