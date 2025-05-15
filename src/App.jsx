@@ -12,35 +12,31 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const backgroundAnimation = document.createElement('div');
-    backgroundAnimation.className = 'background-animation';
-    document.body.appendChild(backgroundAnimation)
-
-    for (let i = 0; i < 50; i++) {
-      const star = document.createElement('div')
-      star.className = 'star'
-      star.innerHTML = '★'
-      star.style.top = `${Math.random() * 100}vh`
-      star.style.left = `${Math.random() * 100}vw`
-
-      if (Math.random() > 0.7) {
-        star.classList.add('blue')
-      }
-
-      const fadeDelay = Math.random() * 1
-      const rotateDelay = 0
-
-      star.style.animationDelay = `${fadeDelay}s, ${rotateDelay}s`
-
-      backgroundAnimation.appendChild(star)
-    }
-
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 150);
 
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    let vantaEffect = null;
+    if (window.VANTA && window.THREE) {
+      vantaEffect = window.VANTA.WAVES({
+        el: "#vanta-background",
+        THREE: window.THREE,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x0
+      });
+    }
     return () => {
-      clearTimeout(timer);
+      if (vantaEffect) vantaEffect.destroy();
     };
   }, []);
 
@@ -67,6 +63,7 @@ function App() {
 
   return (
     <div className="app">
+      <div id="vanta-background"></div>
       <Header />
       <SearchBar searchTerm={searchTerm} onSearchChange={handleSearchChange} />
       <ApkList

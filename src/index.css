@@ -32,6 +32,7 @@ body {
   padding: 20px;
   margin: 10px;
   width: 300px;
+  max-width: 100%;
   text-align: center;
   border-radius: 12px;
   box-sizing: border-box;
@@ -42,6 +43,7 @@ body {
   animation: fadeIn 1s forwards;
   backdrop-filter: none;
   border: 1px solid #ffffff;
+  min-width: 0;
 }
 
 .apk-section:hover {
@@ -57,6 +59,13 @@ body {
 .apk-section button {
   position: relative;
   z-index: 1;
+}
+
+.apk-section h2,
+.apk-section p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .apk-section img {
@@ -141,45 +150,6 @@ body {
   font-size: 14px;
   color: #aaaaaa;
   margin: 2px 0 5px 0;
-}
-
-.background-animation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.background-animation .star {
-  position: absolute;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 36px;
-  opacity: 0;
-  animation: fadeInStar 1s forwards, rotateStar 12s linear infinite;
-  user-select: none;
-}
-
-.background-animation .star.blue {
-  color: rgba(100, 150, 255, 0.7);
-}
-
-@keyframes fadeInStar {
-  to {
-    opacity: 0.6;
-  }
-}
-
-@keyframes rotateStar {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .header {
@@ -520,4 +490,14 @@ body {
   width: 80%;
   height: 14px;
   margin: 10px auto 0;
+}
+
+#vanta-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
 }
