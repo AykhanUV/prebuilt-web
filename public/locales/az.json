@@ -5,6 +5,7 @@
   "versionPrefix": "Versiya:",
   "requiresMicroG": "MicroG tələb edir",
   "downloadButton": "Yüklə",
+  "downloadingButton": "Yüklənir...",
   "noResults": "Uyğun APK tapılmadı.",
   "footerCopyright": "© 2024 AykhanUV",
   "notFoundTitle": "404 - Səhifə Tapılmadı",

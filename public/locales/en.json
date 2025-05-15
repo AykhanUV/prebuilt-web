@@ -5,6 +5,7 @@
   "versionPrefix": "Version:",
   "requiresMicroG": "Requires MicroG",
   "downloadButton": "Download",
+  "downloadingButton": "Downloading...",
   "noResults": "No matching APKs found.",
   "footerCopyright": "© 2024 AykhanUV",
   "notFoundTitle": "404 - Page Not Found",

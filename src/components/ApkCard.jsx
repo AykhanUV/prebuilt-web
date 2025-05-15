@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 function formatFileSize(bytes) {
@@ -38,8 +38,20 @@ function highlightMatch(text, term) {
 
 const ApkCard = ({ apk, searchTerm, handleDownload, index }) => {
   const { t } = useTranslation();
+  const [isDownloading, setIsDownloading] = useState(false);
 
   const logoSrc = apk.logo ? `/${apk.logo}` : '/placeholder.png';
+
+  const handleDownloadClick = () => {
+    if (!apk.downloadLink || isDownloading) return;
+
+    setIsDownloading(true);
+    handleDownload(apk.downloadLink, apk.name);
+
+    setTimeout(() => {
+      setIsDownloading(false);
+    }, 3000);
+  };
 
   return (
     <div
@@ -58,8 +70,8 @@ const ApkCard = ({ apk, searchTerm, handleDownload, index }) => {
           <span>{t('requiresMicroG')}</span>
         </div>
       )}
-      <button onClick={() => handleDownload(apk.downloadLink, apk.name)} disabled={!apk.downloadLink}>
-        {t('downloadButton')}
+      <button onClick={handleDownloadClick} disabled={!apk.downloadLink || isDownloading}>
+        {isDownloading ? t('downloadingButton') : t('downloadButton')}
       </button>
       {(apk.fileSize !== undefined || apk.downloadLink) && (
         <div className="apk-meta-container">
