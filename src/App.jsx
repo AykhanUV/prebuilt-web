@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     let vantaEffect = null;
     if (window.VANTA && window.THREE) {
-      vantaEffect = window.VANTA.WAVES({
+      vantaEffect = window.VANTA.FOG({
         el: "#vanta-background",
         THREE: window.THREE,
         mouseControls: true,
@@ -32,7 +32,11 @@ function App() {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: 0x0
+        highlightColor: 0x0,
+        midtoneColor: 0x0,
+        lowlightColor: 0x75ff,
+        baseColor: 0x0,
+        blurFactor: 0.19
       });
     }
     return () => {
