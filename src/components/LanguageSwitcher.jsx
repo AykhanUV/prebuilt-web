@@ -45,10 +45,9 @@ const LanguageSwitcher = () => {
         {currentLanguage.flag}
         <span className="dropdown-arrow">{isOpen ? ' ▲' : ' ▼'}</span>
       </button>
-      {isOpen && (
-        <ul className="language-switcher-dropdown">
-          {Object.keys(languages).map((lng) => (
-            <li key={lng}>
+      <ul className={`language-switcher-dropdown ${isOpen ? 'open' : ''}`}>
+        {Object.keys(languages).map((lng) => (
+          <li key={lng}>
               <button
                 className={`language-option ${currentLanguageCode === lng ? 'selected' : ''}`}
                 onClick={() => handleLanguageChange(lng)}
@@ -58,7 +57,6 @@ const LanguageSwitcher = () => {
             </li>
           ))}
         </ul>
-      )}
     </div>
   );
 };

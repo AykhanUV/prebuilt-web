@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
   <React.StrictMode>
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={null}>
       <I18nextProvider i18n={i18n}>
         <Router>
           <Routes>
