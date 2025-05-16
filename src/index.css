@@ -277,7 +277,7 @@ body {
   color: #e0e0e0;
   font-size: 1em;
   box-sizing: border-box;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .search-input::placeholder {
@@ -288,6 +288,7 @@ body {
   outline: none;
   border-color: #ffffff;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  transform: scale(1.02);
 }
 
 .no-results {
