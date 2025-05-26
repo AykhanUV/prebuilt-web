@@ -19,23 +19,64 @@ function App() {
   }, []);
 
   useEffect(() => {
-    let vantaEffect = null;
-    if (window.VANTA && window.p5) {
-      vantaEffect = window.VANTA.TOPOLOGY({
-        el: "#vanta-background",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x45ed,
-        backgroundColor: 0x0
-      });
+    const canvas = document.getElementById('matrix-background');
+    const ctx = canvas.getContext('2d');
+
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    canvas.width = width;
+    canvas.height = height;
+
+    const alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()_+[]{}|;':\",./<>?`~абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+    const fontSize = 16;
+    let columns = Math.floor(width / fontSize);
+    const drops = [];
+
+    for (let x = 0; x < columns; x++) {
+      drops[x] = 1;
     }
+
+    let animationInterval;
+
+    function draw() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = '#007bff';
+      ctx.font = fontSize + 'px monospace';
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    const setup = () => {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+      columns = Math.floor(width / fontSize);
+      drops.length = 0;
+      for (let x = 0; x < columns; x++) {
+        drops[x] = 1;
+      }
+      if (animationInterval) clearInterval(animationInterval);
+      animationInterval = setInterval(draw, 33);
+    };
+    
+    setup();
+
+    window.addEventListener('resize', setup);
+
     return () => {
-      if (vantaEffect) vantaEffect.destroy();
+      clearInterval(animationInterval);
+      window.removeEventListener('resize', setup);
     };
   }, []);
 
@@ -62,7 +103,7 @@ function App() {
 
   return (
     <div className="app">
-      <div id="vanta-background"></div>
+      <canvas id="matrix-background"></canvas>
       <Header />
       <SearchBar searchTerm={searchTerm} onSearchChange={handleSearchChange} />
       <ApkList

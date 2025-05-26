@@ -533,17 +533,6 @@ body {
   margin: 10px auto 0;
 }
 
-#vanta-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden;
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -554,4 +543,15 @@ body {
     scroll-behavior: auto !important;
     transition-delay: 0ms !important;
   }
+}
+
+#matrix-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.6;
 }
