@@ -61,11 +61,16 @@ function App() {
       height = window.innerHeight;
       canvas.width = width;
       canvas.height = height;
-      columns = Math.floor(width / fontSize);
-      drops.length = 0;
-      for (let x = 0; x < columns; x++) {
-        drops[x] = 1;
+      
+      const newColumns = Math.floor(width / fontSize);
+      if (newColumns !== columns) {
+        columns = newColumns;
+        drops.length = 0;
+        for (let x = 0; x < columns; x++) {
+          drops[x] = Math.floor(Math.random() * (canvas.height / fontSize));
+        }
       }
+
       if (animationInterval) clearInterval(animationInterval);
       animationInterval = setInterval(draw, 33);
     };
