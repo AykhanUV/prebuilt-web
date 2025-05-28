@@ -226,6 +226,8 @@ body {
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.2s ease-out, transform 0.2s ease-out, visibility 0s 0.2s;
+  max-height: 250px;
+  overflow-y: auto;
 }
 
 .language-switcher-dropdown.open {
