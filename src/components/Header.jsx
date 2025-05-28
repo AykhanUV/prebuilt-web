@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 
-const Header = () => {
+const Header = ({ toggleMatrixAnimation, showMatrixAnimation }) => {
   const { t } = useTranslation();
 
   return (
@@ -15,6 +15,14 @@ const Header = () => {
       </div>
       <h1>{t('headerTitle')}</h1>
       <div className="header-right">
+        <button
+          onClick={toggleMatrixAnimation}
+          className="matrix-toggle-button"
+          aria-label={showMatrixAnimation ? t('disableMatrixAnimation') : t('enableMatrixAnimation')}
+          title={showMatrixAnimation ? t('disableMatrixAnimation') : t('enableMatrixAnimation')}
+        >
+          <i className={showMatrixAnimation ? "fas fa-toggle-on" : "fas fa-toggle-off"} aria-hidden="true"></i>
+        </button>
         <LanguageSwitcher />
       </div>
     </div>

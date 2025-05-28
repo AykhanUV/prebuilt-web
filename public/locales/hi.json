@@ -13,6 +13,8 @@
   "notFoundButton": "होम पर वापस जाएं",
   "fileSizeLabel": "आकार:",
   "scanOnVirusTotal": "VirusTotal पर स्कैन करें",
+  "enableMatrixAnimation": "मैट्रिक्स एनिमेशन सक्षम करें",
+  "disableMatrixAnimation": "मैट्रिक्स एनिमेशन अक्षम करें",
 
   "apkDesc_Afnify": "यह ऐप विज्ञापनों के बिना और कस्टम सुविधाओं के साथ एक संशोधित YouTube ऐप है (अधिकतर अद्यतित)",
   "apkDesc_AfnMusic": "यह ऐप विज्ञापनों के बिना और कस्टम सुविधाओं के साथ एक संशोधित YouTube Music ऐप है",

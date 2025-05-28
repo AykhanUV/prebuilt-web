@@ -13,6 +13,8 @@
   "notFoundButton": "Voltar para o início",
   "fileSizeLabel": "Tamanho:",
   "scanOnVirusTotal": "Verificar no VirusTotal",
+  "enableMatrixAnimation": "Ativar Animação Matrix",
+  "disableMatrixAnimation": "Desativar Animação Matrix",
 
   "apkDesc_Afnify": "Este aplicativo é um app modificado do YouTube sem anúncios e com recursos personalizados (Principalmente atualizado)",
   "apkDesc_AfnMusic": "Este aplicativo é um app modificado do YouTube Music sem anúncios e com recursos personalizados",

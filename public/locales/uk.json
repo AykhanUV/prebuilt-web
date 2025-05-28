@@ -13,6 +13,8 @@
   "notFoundButton": "Повернутися на головну",
   "fileSizeLabel": "Розмір:",
   "scanOnVirusTotal": "Сканувати на VirusTotal",
+  "enableMatrixAnimation": "Увімкнути Матричну Анімацію",
+  "disableMatrixAnimation": "Вимкнути Матричну Анімацію",
 
   "apkDesc_Afnify": "Цей додаток є модифікованим додатком YouTube без реклами та з власними функціями (Переважно актуальний)",
   "apkDesc_AfnMusic": "Цей додаток є модифікованим додатком YouTube Music без реклами та з власними функціями",

@@ -13,6 +13,8 @@
   "notFoundButton": "ホームに戻る",
   "fileSizeLabel": "サイズ：",
   "scanOnVirusTotal": "VirusTotalでスキャン",
+  "enableMatrixAnimation": "マトリックスアニメーションを有効にする",
+  "disableMatrixAnimation": "マトリックスアニメーションを無効にする",
 
   "apkDesc_Afnify": "このアプリは広告なしでカスタム機能を備えた修正版YouTubeアプリです（主に最新版）",
   "apkDesc_AfnMusic": "このアプリは広告なしでカスタム機能を備えた修正版YouTube Musicアプリです",

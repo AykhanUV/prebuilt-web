@@ -13,6 +13,8 @@
   "notFoundButton": "Vissza a főoldalra",
   "fileSizeLabel": "Méret:",
   "scanOnVirusTotal": "Ellenőrzés a VirusTotalon",
+  "enableMatrixAnimation": "Mátrix Animáció Engedélyezése",
+  "disableMatrixAnimation": "Mátrix Animáció Letiltása",
 
   "apkDesc_Afnify": "Ez az alkalmazás egy módosított YouTube alkalmazás hirdetések nélkül és egyéni funkciókkal (Többnyire naprakész)",
   "apkDesc_AfnMusic": "Ez az alkalmazás egy módosított YouTube Music alkalmazás hirdetések nélkül és egyéni funkciókkal",

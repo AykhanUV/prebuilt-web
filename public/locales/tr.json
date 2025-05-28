@@ -13,6 +13,8 @@
   "notFoundButton": "Ana Sayfaya Dön",
   "fileSizeLabel": "Boyut:",
   "scanOnVirusTotal": "VirusTotal'da Tara",
+  "enableMatrixAnimation": "Matrix Animasyonunu Etkinleştir",
+  "disableMatrixAnimation": "Matrix Animasyonunu Devre Dışı Bırak",
 
   "apkDesc_Afnify": "Bu uygulama, reklamsız ve özel özelliklere sahip değiştirilmiş bir YouTube uygulamasıdır (Çoğunlukla günceldir)",
   "apkDesc_AfnMusic": "Bu uygulama, reklamsız ve özel özelliklere sahip değiştirilmiş bir YouTube Music uygulamasıdır",

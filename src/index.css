@@ -557,3 +557,23 @@ body {
   pointer-events: none;
   opacity: 0.6;
 }
+
+.matrix-toggle-button {
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 0 5px;
+  line-height: 1;
+  margin-right: 10px;
+  transition: opacity 0.2s ease-out;
+}
+
+.matrix-toggle-button:hover {
+  opacity: 0.8;
+}
+
+.matrix-toggle-button i {
+  vertical-align: middle;
+}

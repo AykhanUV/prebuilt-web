@@ -13,6 +13,8 @@
   "notFoundButton": "العودة إلى الصفحة الرئيسية",
   "fileSizeLabel": "الحجم:",
   "scanOnVirusTotal": "فحص على VirusTotal",
+  "enableMatrixAnimation": "تمكين الرسوم المتحركة للمصفوفة",
+  "disableMatrixAnimation": "تعطيل الرسوم المتحركة للمصفوفة",
 
   "apkDesc_Afnify": "هذا التطبيق هو تطبيق YouTube معدل بدون إعلانات وميزات مخصصة (محدث في الغالب)",
   "apkDesc_AfnMusic": "هذا التطبيق هو تطبيق YouTube Music معدل بدون إعلانات وميزات مخصصة",

@@ -13,6 +13,8 @@
   "notFoundButton": "Zpět na domovskou stránku",
   "fileSizeLabel": "Velikost:",
   "scanOnVirusTotal": "Skenovat na VirusTotal",
+  "enableMatrixAnimation": "Povolit Matrix Animaci",
+  "disableMatrixAnimation": "Zakázat Matrix Animaci",
 
   "apkDesc_Afnify": "Tato aplikace je upravená aplikace YouTube bez reklam a s vlastními funkcemi (Většinou aktuální)",
   "apkDesc_AfnMusic": "Tato aplikace je upravená aplikace YouTube Music bez reklam a s vlastními funkcemi",
