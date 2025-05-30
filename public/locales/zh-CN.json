@@ -15,6 +15,7 @@
   "scanOnVirusTotal": "在 VirusTotal 上扫描",
   "enableMatrixAnimation": "启用矩阵动画",
   "disableMatrixAnimation": "禁用矩阵动画",
+  "apkLastUpdatedLabel": "更新于：",
 
   "apkDesc_Afnify": "此应用是修改版的 YouTube 应用，无广告并具有自定义功能（大部分为最新）",
   "apkDesc_AfnMusic": "此应用是修改版的 YouTube Music 应用，无广告并具有自定义功能",

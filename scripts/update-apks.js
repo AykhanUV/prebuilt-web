@@ -104,7 +104,8 @@ async function getLatestReleaseInfo(appConfig) {
             return {
                 version,
                 downloadLink,
-                fileSize: matchingAsset.size
+                fileSize: matchingAsset.size,
+                apkAssetUpdatedAt: matchingAsset.updated_at
             };
         } else {
              console.warn(`Skipping ${name}: Could not determine version or download link.`);
@@ -142,14 +143,18 @@ async function updateApks() {
         if (latestInfo) {
             const mergedData = {
                 ...appConfig,
-                ...latestInfo
+                ...latestInfo,
             };
-
-            if (latestInfo.version !== appConfig.version) {
-                console.log(`  Updating ${appConfig.name}: ${appConfig.version} -> ${latestInfo.version}`);
+            
+            if (latestInfo.version !== appConfig.version || latestInfo.apkAssetUpdatedAt !== appConfig.apkAssetUpdatedAt) {
+                if (latestInfo.version !== appConfig.version) {
+                    console.log(`  Updating ${appConfig.name}: ${appConfig.version} -> ${latestInfo.version} (Asset date: ${latestInfo.apkAssetUpdatedAt})`);
+                } else {
+                    console.log(`  Refreshing asset data for ${appConfig.name} (v${appConfig.version}). New asset date: ${latestInfo.apkAssetUpdatedAt}`);
+                }
                 updatesMade = true;
             } else {
-                 console.log(`  Refreshed data for ${appConfig.name} (v${appConfig.version}).`);
+                 console.log(`  Data for ${appConfig.name} (v${appConfig.version}) is current (Asset date: ${appConfig.apkAssetUpdatedAt || 'N/A'}).`);
             }
             updatedApksData[i] = mergedData;
         } else {

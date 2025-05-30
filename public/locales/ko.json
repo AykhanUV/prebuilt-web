@@ -15,6 +15,7 @@
   "scanOnVirusTotal": "VirusTotal에서 검사",
   "enableMatrixAnimation": "매트릭스 애니메이션 활성화",
   "disableMatrixAnimation": "매트릭스 애니메이션 비활성화",
+  "apkLastUpdatedLabel": "업데이트됨:",
 
   "apkDesc_Afnify": "이 앱은 광고가 없고 사용자 지정 기능이 있는 수정된 YouTube 앱입니다 (대부분 최신 상태)",
   "apkDesc_AfnMusic": "이 앱은 광고가 없고 사용자 지정 기능이 있는 수정된 YouTube Music 앱입니다",

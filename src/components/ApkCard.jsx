@@ -35,7 +35,6 @@ function highlightMatch(text, term) {
   }
 }
 
-
 const ApkCard = ({ apk, searchTerm, handleDownload, index }) => {
   const { t } = useTranslation();
   const [isDownloading, setIsDownloading] = useState(false);
@@ -53,12 +52,28 @@ const ApkCard = ({ apk, searchTerm, handleDownload, index }) => {
     }, 3000);
   };
 
+  let formattedUpdateDate = null;
+
+  if (apk.apkAssetUpdatedAt) {
+    const publishDate = new Date(apk.apkAssetUpdatedAt);
+    formattedUpdateDate = publishDate.toLocaleDateString(undefined, {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
+  }
+
   return (
     <div
       className="apk-section fade-in"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <h2>{highlightMatch(apk.name, searchTerm)}</h2>
+      {formattedUpdateDate && (
+        <p className="apk-meta last-updated-timestamp">
+          {t('apkLastUpdatedLabel', 'Updated:')} {formattedUpdateDate}
+        </p>
+      )}
       {apk.version && (
          <p className="version-text">{t('versionPrefix', 'Version:')} {apk.version}</p>
       )}

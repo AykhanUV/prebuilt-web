@@ -15,6 +15,7 @@
   "scanOnVirusTotal": "Skanna på VirusTotal",
   "enableMatrixAnimation": "Aktivera Matrix-animation",
   "disableMatrixAnimation": "Inaktivera Matrix-animation",
+  "apkLastUpdatedLabel": "Uppdaterad:",
 
   "apkDesc_Afnify": "Denna app är en modifierad YouTube-app utan annonser och med anpassade funktioner (Mestadels uppdaterad)",
   "apkDesc_AfnMusic": "Denna app är en modifierad YouTube Music-app utan annonser och med anpassade funktioner",

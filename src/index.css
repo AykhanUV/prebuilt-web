@@ -499,40 +499,36 @@ body {
   margin: 10px auto 5px;
 }
 
-.skeleton-version {
-  width: 30%;
-  height: 14px;
-  margin: 2px auto 10px;
-}
-
-.skeleton-logo {
-  width: 100px;
-  height: 100px;
-  border-radius: 10px;
+.skeleton-image {
+  width: 80px;
+  height: 80px;
   margin: 10px auto;
+  border-radius: 10px;
 }
 
 .skeleton-text {
   width: 90%;
-  height: 16px;
-  margin: 10px auto;
+  height: 12px;
+  margin: 8px auto;
 }
 
 .skeleton-text-short {
   width: 70%;
+  height: 12px;
+  margin: 8px auto;
 }
 
 .skeleton-button {
-  width: 120px;
-  height: 40px;
+  width: 100px;
+  height: 36px;
+  margin: 15px auto 5px;
   border-radius: 50px;
-  margin: 15px auto 10px;
 }
 
 .skeleton-meta {
-  width: 80%;
-  height: 14px;
-  margin: 10px auto 0;
+  width: 50%;
+  height: 12px;
+  margin: 8px auto 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -576,4 +572,20 @@ body {
 
 .matrix-toggle-button i {
   vertical-align: middle;
+}
+
+.last-updated-timestamp {
+  font-size: 0.8em;
+  color: #aaa;
+  text-align: center;
+  margin: 3px 0 2px 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 0.75em;
+  font-weight: bold;
+  border-radius: 10px;
+  text-transform: uppercase;
 }
