@@ -95,11 +95,11 @@
     "assetPattern": "YT-Extended.apk",
     "logo": "yt-extended.png",
     "descKey": "apkDesc_YT-Extended",
-    "downloadLink": "https://github.com/AykhanUV/YT-Extended/releases/download/YT-Extended%2820.11.37%29/YT-Extended.apk",
-    "version": "20.11.37",
+    "downloadLink": "https://github.com/AykhanUV/YT-Extended/releases/download/YT-Extended%2820.16.40%29/YT-Extended.apk",
+    "version": "20.16.40",
     "requiresMicroG": true,
-    "fileSize": 86346432,
-    "apkAssetUpdatedAt": "2025-05-30T10:13:05Z"
+    "fileSize": 87371070,
+    "apkAssetUpdatedAt": "2025-06-04T11:49:22Z"
   },
   {
     "name": "TikTok",
