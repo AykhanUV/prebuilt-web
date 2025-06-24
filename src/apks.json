@@ -121,10 +121,10 @@
     "assetPattern": "Minecraft-([\\d.]+)\\.apk",
     "logo": "minecraft.png",
     "descKey": "apkDesc_Minecraft",
-    "downloadLink": "https://github.com/AykhanUV/mc/releases/download/1.21.30.03/Minecraft-1.21.81.2.apk",
-    "version": "1.21.81.2",
-    "fileSize": 286914255,
-    "apkAssetUpdatedAt": "2025-05-15T15:18:32Z"
+    "downloadLink": "https://github.com/AykhanUV/mc/releases/download/1.21.30.03/Minecraft-1.21.92.1.apk",
+    "version": "1.21.92.1",
+    "fileSize": 323408910,
+    "apkAssetUpdatedAt": "2025-06-24T10:24:15Z"
   },
   {
     "name": "Seal",
