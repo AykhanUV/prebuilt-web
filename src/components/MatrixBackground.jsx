@@ -14,7 +14,7 @@ const MatrixBackground = () => {
     canvas.width = width;
     canvas.height = height;
 
-    const alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()_+[]{}|;':\",./<>?`~абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+    const alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()_+[]{}|;':\",./<>?`~";
     const fontSize = 16;
     let columns = Math.floor(width / fontSize);
     const drops = [];
