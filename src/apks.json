@@ -145,9 +145,9 @@
     "assetPattern": "YTDLnis-.*arm64-v8a-release\\.apk",
     "logo": "ytdlnis.png",
     "descKey": "apkDesc_YTDLnis",
-    "downloadLink": "https://github.com/deniscerri/ytdlnis/releases/download/v1.8.4/YTDLnis-1.8.4-arm64-v8a-release.apk",
-    "version": "1.8.4",
-    "fileSize": 45219428,
-    "apkAssetUpdatedAt": "2025-04-06T15:32:09Z"
+    "downloadLink": "https://github.com/deniscerri/ytdlnis/releases/download/v1.8.5/YTDLnis-1.8.5-arm64-v8a-release.apk",
+    "version": "1.8.5",
+    "fileSize": 45316891,
+    "apkAssetUpdatedAt": "2025-07-28T20:27:53Z"
   }
 ]
