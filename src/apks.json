@@ -82,10 +82,10 @@
     "assetPattern": "Spotify-([\\d.]+)\\.apk",
     "logo": "spotify.png",
     "descKey": "apkDesc_Spotify",
-    "downloadLink": "https://github.com/AykhanUV/mc/releases/download/1.21.30.03/Spotify-9.0.52.505.apk",
-    "version": "9.0.52.505",
-    "fileSize": 47167661,
-    "apkAssetUpdatedAt": "2025-06-14T10:18:43Z"
+    "downloadLink": "https://github.com/AykhanUV/mc/releases/download/1.21.30.03/Spotify-9.0.74.1121.apk",
+    "version": "9.0.74.1121",
+    "fileSize": 48533967,
+    "apkAssetUpdatedAt": "2025-08-28T15:39:10Z"
   },
   {
     "name": "YT-Extended",
