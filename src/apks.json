@@ -7,11 +7,11 @@
     "assetPattern": "Afnify.apk",
     "logo": "afnify.png",
     "descKey": "apkDesc_Afnify",
-    "downloadLink": "https://github.com/AykhanUV/Afnify/releases/download/Afnify%2820.21.37%29/Afnify.apk",
+    "downloadLink": "https://github.com/AykhanUV/Afnify/releases/download/Afnify%2820.21.37%29v2/Afnify.apk",
     "version": "20.21.37",
     "requiresMicroG": true,
-    "fileSize": 88248112,
-    "apkAssetUpdatedAt": "2025-06-09T15:22:21Z"
+    "fileSize": 95594565,
+    "apkAssetUpdatedAt": "2025-08-28T09:14:31Z"
   },
   {
     "name": "AfnMusic",
@@ -21,11 +21,11 @@
     "assetPattern": "AfnMusic.apk",
     "logo": "afnmusic.png",
     "descKey": "apkDesc_AfnMusic",
-    "downloadLink": "https://github.com/AykhanUV/AfnMusic/releases/download/AfnMusic%288.18.51%29/AfnMusic.apk",
-    "version": "8.18.51",
+    "downloadLink": "https://github.com/AykhanUV/AfnMusic/releases/download/AfnMusic%288.30.54%29/AfnMusic.apk",
+    "version": "8.30.54",
     "requiresMicroG": true,
-    "fileSize": 66618633,
-    "apkAssetUpdatedAt": "2025-06-09T15:24:52Z"
+    "fileSize": 69340076,
+    "apkAssetUpdatedAt": "2025-08-28T09:13:10Z"
   },
   {
     "name": "MicroG",
