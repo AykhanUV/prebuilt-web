@@ -7,11 +7,11 @@
     "assetPattern": "Afnify.apk",
     "logo": "afnify.png",
     "descKey": "apkDesc_Afnify",
-    "downloadLink": "https://github.com/AykhanUV/Afnify/releases/download/Afnify%2820.21.37%29v2/Afnify.apk",
+    "downloadLink": "https://github.com/AykhanUV/Afnify/releases/download/Afnify%2820.21.37%29v3/Afnify.apk",
     "version": "20.21.37",
     "requiresMicroG": true,
-    "fileSize": 95594565,
-    "apkAssetUpdatedAt": "2025-08-28T09:14:31Z"
+    "fileSize": 95913416,
+    "apkAssetUpdatedAt": "2025-08-31T18:01:44Z"
   },
   {
     "name": "AfnMusic",
@@ -21,11 +21,11 @@
     "assetPattern": "AfnMusic.apk",
     "logo": "afnmusic.png",
     "descKey": "apkDesc_AfnMusic",
-    "downloadLink": "https://github.com/AykhanUV/AfnMusic/releases/download/AfnMusic%288.30.54%29/AfnMusic.apk",
+    "downloadLink": "https://github.com/AykhanUV/AfnMusic/releases/download/AfnMusic%288.30.54%29v2/AfnMusic.apk",
     "version": "8.30.54",
     "requiresMicroG": true,
-    "fileSize": 69340076,
-    "apkAssetUpdatedAt": "2025-08-28T09:13:10Z"
+    "fileSize": 69442845,
+    "apkAssetUpdatedAt": "2025-08-31T17:58:03Z"
   },
   {
     "name": "MicroG",
@@ -34,10 +34,10 @@
     "assetPattern": "MicroG-signed.apk",
     "logo": "microg.png",
     "descKey": "apkDesc_MicroG",
-    "downloadLink": "https://github.com/AykhanUV/MicroG/releases/download/3.0/MicroG-signed.apk",
-    "version": "3.0",
-    "fileSize": 12378239,
-    "apkAssetUpdatedAt": "2025-04-26T07:06:17Z"
+    "downloadLink": "https://github.com/AykhanUV/MicroG/releases/download/3.5/MicroG-signed.apk",
+    "version": "3.5",
+    "fileSize": 12651481,
+    "apkAssetUpdatedAt": "2025-08-31T19:34:02Z"
   },
   {
     "name": "AfnPlayer",
