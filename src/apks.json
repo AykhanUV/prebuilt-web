@@ -10,8 +10,8 @@
     "downloadLink": "https://github.com/AykhanUV/Afnify/releases/download/Afnify%2820.21.37%29v3/Afnify.apk",
     "version": "20.21.37",
     "requiresMicroG": true,
-    "fileSize": 95913416,
-    "apkAssetUpdatedAt": "2025-08-31T18:01:44Z"
+    "fileSize": 95901186,
+    "apkAssetUpdatedAt": "2025-08-31T20:07:56Z"
   },
   {
     "name": "AfnMusic",
@@ -24,8 +24,8 @@
     "downloadLink": "https://github.com/AykhanUV/AfnMusic/releases/download/AfnMusic%288.30.54%29v2/AfnMusic.apk",
     "version": "8.30.54",
     "requiresMicroG": true,
-    "fileSize": 69442845,
-    "apkAssetUpdatedAt": "2025-08-31T17:58:03Z"
+    "fileSize": 69184797,
+    "apkAssetUpdatedAt": "2025-08-31T20:07:49Z"
   },
   {
     "name": "MicroG",
