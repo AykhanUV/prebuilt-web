@@ -8,67 +8,163 @@ const MatrixBackground = () => {
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
-
     let width = window.innerWidth;
     let height = window.innerHeight;
     canvas.width = width;
     canvas.height = height;
 
-    const alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()_+[]{}|;':\",./<>?`~";
-    const fontSize = 16;
-    let columns = Math.floor(width / fontSize);
-    const drops = [];
+    // Particle network configuration
+    const particles = [];
+    const particleCount = Math.min(Math.floor((width * height) / 8000), 150);
+    const maxDistance = 180;
+    const mouse = { x: null, y: null, radius: 200 };
 
-    for (let x = 0; x < columns; x++) {
-      drops[x] = 1;
-    }
+    class Particle {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.vx = (Math.random() - 0.5) * 0.4;
+        this.vy = (Math.random() - 0.5) * 0.4;
+        this.radius = Math.random() * 2 + 1;
+        this.baseSpeed = Math.random() * 0.15 + 0.1;
+        this.angle = Math.random() * Math.PI * 2;
+        this.angleVelocity = (Math.random() - 0.5) * 0.01;
+      }
 
-    let animationInterval;
+      update() {
+        // Add idle random movement
+        this.angle += this.angleVelocity;
+        const idleForceX = Math.cos(this.angle) * this.baseSpeed;
+        const idleForceY = Math.sin(this.angle) * this.baseSpeed;
 
-    function draw() {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+        this.vx += idleForceX * 0.05;
+        this.vy += idleForceY * 0.05;
 
-      ctx.fillStyle = '#007bff';
-      ctx.font = fontSize + 'px monospace';
-
-      for (let i = 0; i < drops.length; i++) {
-        const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-          drops[i] = 0;
+        // Occasionally change direction for more organic movement
+        if (Math.random() < 0.01) {
+          this.angleVelocity = (Math.random() - 0.5) * 0.01;
         }
-        drops[i]++;
+
+        this.x += this.vx;
+        this.y += this.vy;
+
+        // Bounce off edges
+        if (this.x < 0 || this.x > width) this.vx *= -1;
+        if (this.y < 0 || this.y > height) this.vy *= -1;
+
+        // Keep particles in bounds
+        this.x = Math.max(0, Math.min(width, this.x));
+        this.y = Math.max(0, Math.min(height, this.y));
+
+        // Mouse interaction
+        if (mouse.x !== null && mouse.y !== null) {
+          const dx = mouse.x - this.x;
+          const dy = mouse.y - this.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < mouse.radius) {
+            const force = (mouse.radius - distance) / mouse.radius;
+            const angle = Math.atan2(dy, dx);
+            this.vx -= Math.cos(angle) * force * 0.3;
+            this.vy -= Math.sin(angle) * force * 0.3;
+          }
+        }
+
+        // Damping
+        this.vx *= 0.96;
+        this.vy *= 0.96;
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+        ctx.fill();
       }
     }
 
-    const setup = () => {
+    // Initialize particles
+    for (let i = 0; i < particleCount; i++) {
+      particles.push(new Particle());
+    }
+
+    function connectParticles() {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < maxDistance) {
+            const opacity = (1 - distance / maxDistance) * 0.6;
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
+            ctx.lineWidth = 1;
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    let animationId;
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+
+      // Draw subtle gradient background
+      const gradient = ctx.createRadialGradient(width / 2, height / 2, 0, width / 2, height / 2, width / 2);
+      gradient.addColorStop(0, 'rgba(20, 20, 20, 0.1)');
+      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.3)');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, width, height);
+
+      particles.forEach(particle => {
+        particle.update();
+        particle.draw();
+      });
+
+      connectParticles();
+      animationId = requestAnimationFrame(animate);
+    }
+
+    const handleResize = () => {
       width = window.innerWidth;
       height = window.innerHeight;
       canvas.width = width;
       canvas.height = height;
-      
-      const newColumns = Math.floor(width / fontSize);
-      if (newColumns !== columns) {
-        columns = newColumns;
-        drops.length = 0;
-        for (let x = 0; x < columns; x++) {
-          drops[x] = Math.floor(Math.random() * (canvas.height / fontSize));
-        }
+
+      // Adjust particle count on resize
+      const newParticleCount = Math.min(Math.floor((width * height) / 8000), 150);
+      while (particles.length < newParticleCount) {
+        particles.push(new Particle());
       }
-
-      if (animationInterval) clearInterval(animationInterval);
-      animationInterval = setInterval(draw, 33);
+      while (particles.length > newParticleCount) {
+        particles.pop();
+      }
     };
-    
-    setup();
 
-    window.addEventListener('resize', setup);
+    const handleMouseMove = (e) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    };
+
+    const handleMouseLeave = () => {
+      mouse.x = null;
+      mouse.y = null;
+    };
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseleave', handleMouseLeave);
+
+    animate();
 
     return () => {
-      clearInterval(animationInterval);
-      window.removeEventListener('resize', setup);
+      cancelAnimationFrame(animationId);
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseleave', handleMouseLeave);
     };
   }, []);
 

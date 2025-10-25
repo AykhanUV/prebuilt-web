@@ -551,7 +551,7 @@ body {
   height: 100vh;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 .matrix-toggle-button {
